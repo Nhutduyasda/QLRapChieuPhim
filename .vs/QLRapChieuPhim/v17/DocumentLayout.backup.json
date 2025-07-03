@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FAE2328E-219F-4DC3-A41F-78A518FBA3E7}|GUI\\GUI_View.csproj|e:\\fpt polytechnic\\pro131 - d\u1EF1 \u00E1n 1 (udpm.net)-20250701t003301z-1-001\\ql r\u1EA1p chi\u1EBFu phim\\qlrapchieuphim\\gui\\gui_view.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FAE2328E-219F-4DC3-A41F-78A518FBA3E7}|GUI\\GUI_View.csproj|solutionrelative:gui\\gui_view.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44945B68-8E55-47CC-9F15-157ED0C53F6A}|DTO_Model\\DTO_Model.csproj|e:\\fpt polytechnic\\pro131 - d\u1EF1 \u00E1n 1 (udpm.net)-20250701t003301z-1-001\\ql r\u1EA1p chi\u1EBFu phim\\qlrapchieuphim\\dto_model\\dto_model.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{44945B68-8E55-47CC-9F15-157ED0C53F6A}|DTO_Model\\DTO_Model.csproj|solutionrelative:dto_model\\dto_model.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|e:\\fpt polytechnic\\pro131 - d\u1EF1 \u00E1n 1 (udpm.net)-20250701t003301z-1-001\\ql r\u1EA1p chi\u1EBFu phim\\qlrapchieuphim\\dal.service\\dal_service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|solutionrelative:dal.service\\dal_service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44945B68-8E55-47CC-9F15-157ED0C53F6A}|DTO_Model\\DTO_Model.csproj|e:\\fpt polytechnic\\pro131 - d\u1EF1 \u00E1n 1 (udpm.net)-20250701t003301z-1-001\\ql r\u1EA1p chi\u1EBFu phim\\qlrapchieuphim\\dto_model\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44945B68-8E55-47CC-9F15-157ED0C53F6A}|DTO_Model\\DTO_Model.csproj|solutionrelative:dto_model\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL.Service.csproj|e:\\fpt polytechnic\\pro131 - d\u1EF1 \u00E1n 1 (udpm.net)-20250701t003301z-1-001\\ql r\u1EA1p chi\u1EBFu phim\\qlrapchieuphim\\dal.service\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL.Service.csproj|solutionrelative:dal.service\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAE2328E-219F-4DC3-A41F-78A518FBA3E7}|GUI\\GUI.csproj|e:\\fpt polytechnic\\pro131 - d\u1EF1 \u00E1n 1 (udpm.net)-20250701t003301z-1-001\\ql r\u1EA1p chi\u1EBFu phim\\qlrapchieuphim\\gui\\from\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAE2328E-219F-4DC3-A41F-78A518FBA3E7}|GUI\\GUI.csproj|solutionrelative:gui\\from\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 173,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GUI_View",
+              "DocumentMoniker": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\GUI\\GUI_View.csproj",
+              "RelativeDocumentMoniker": "GUI\\GUI_View.csproj",
+              "ToolTip": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\GUI\\GUI_View.csproj",
+              "RelativeToolTip": "GUI\\GUI_View.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-02T17:03:49.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DTO_Model",
+              "DocumentMoniker": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
+              "RelativeDocumentMoniker": "DTO_Model\\DTO_Model.csproj",
+              "ToolTip": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
+              "RelativeToolTip": "DTO_Model\\DTO_Model.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-02T17:03:48.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DAL_Service",
+              "DocumentMoniker": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj",
+              "RelativeDocumentMoniker": "DAL.Service\\DAL_Service.csproj",
+              "ToolTip": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj",
+              "RelativeToolTip": "DAL.Service\\DAL_Service.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-02T17:03:46.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\DTO_Model\\Class1.cs",
+              "RelativeDocumentMoniker": "DTO_Model\\Class1.cs",
+              "ToolTip": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\DTO_Model\\Class1.cs",
+              "RelativeToolTip": "DTO_Model\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T17:01:36.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\DAL.Service\\Class1.cs",
+              "RelativeDocumentMoniker": "DAL.Service\\Class1.cs",
+              "ToolTip": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\DAL.Service\\Class1.cs",
+              "RelativeToolTip": "DAL.Service\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T16:59:16.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\GUI\\From\\Form1.cs",
+              "RelativeDocumentMoniker": "GUI\\From\\Form1.cs",
+              "ToolTip": "E:\\FPT POLYTECHNIC\\PRO131 - D\u1EF1 \u00E1n 1 (UDPM.NET)-20250701T003301Z-1-001\\QL R\u1EA1p Chi\u1EBFu Phim\\QLRapChieuPhim\\GUI\\From\\Form1.cs",
+              "RelativeToolTip": "GUI\\From\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T16:58:10.804Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
