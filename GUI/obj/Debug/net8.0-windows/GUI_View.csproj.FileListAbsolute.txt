@@ -1,5 +1,0 @@
-E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI_View.GeneratedMSBuildEditorConfig.editorconfig
-E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI_View.AssemblyInfoInputs.cache
-E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI_View.AssemblyInfo.cs
-E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI_View.csproj.CoreCompileInputs.cache
-E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI_View.sourcelink.json

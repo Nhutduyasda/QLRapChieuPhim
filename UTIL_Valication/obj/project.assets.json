@@ -642,6 +642,16 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "DTO_Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/DTO_Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DTO_Model.dll": {}
+        }
       }
     }
   },
@@ -1658,10 +1668,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "DTO_Model/1.0.0": {
+      "type": "project",
+      "path": "../DTO_Model/DTO_Model.csproj",
+      "msbuildProject": "../DTO_Model/DTO_Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "DTO_Model >= 1.0.0",
       "Microsoft.Data.SqlClient >= 6.0.2"
     ]
   },
@@ -1672,11 +1688,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\UTIL_Valication\\UTIL_Valication.csproj",
+      "projectUniqueName": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
       "projectName": "UTIL_Valication",
-      "projectPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\UTIL_Valication\\UTIL_Valication.csproj",
+      "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
       "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-      "outputPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\UTIL_Valication\\obj\\",
+      "outputPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1696,7 +1712,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {
+              "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

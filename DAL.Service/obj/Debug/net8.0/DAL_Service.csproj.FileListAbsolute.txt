@@ -10,3 +10,21 @@ E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạ
 E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\DAL.Service\obj\Debug\net8.0\DAL_Service.AssemblyInfo.cs
 E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\DAL.Service\obj\Debug\net8.0\DAL_Service.csproj.CoreCompileInputs.cache
 E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\DAL.Service\obj\Debug\net8.0\DAL_Service.sourcelink.json
+C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.csproj.AssemblyReference.cache
+C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.AssemblyInfoInputs.cache
+C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.AssemblyInfo.cs
+C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.csproj.CoreCompileInputs.cache
+C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.sourcelink.json
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\bin\Debug\net8.0\DAL_Service.deps.json
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\bin\Debug\net8.0\DAL_Service.dll
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\bin\Debug\net8.0\DAL_Service.pdb
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\bin\Debug\net8.0\DTO_Model.dll
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\bin\Debug\net8.0\UTIL_Valication.dll
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\bin\Debug\net8.0\DTO_Model.pdb
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\bin\Debug\net8.0\UTIL_Valication.pdb
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Serv.FBAE82EF.Up2Date
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.dll
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\refint\DAL_Service.dll
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.pdb
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\ref\DAL_Service.dll

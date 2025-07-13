@@ -1,0 +1,17 @@
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\bin\Debug\net8.0-windows\GUI.exe
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\bin\Debug\net8.0-windows\GUI.deps.json
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\bin\Debug\net8.0-windows\GUI.runtimeconfig.json
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\bin\Debug\net8.0-windows\GUI.dll
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\bin\Debug\net8.0-windows\GUI.pdb
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.Form1.resources
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.csproj.GenerateResource.cache
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.AssemblyInfoInputs.cache
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.AssemblyInfo.cs
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.csproj.CoreCompileInputs.cache
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.sourcelink.json
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.dll
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\refint\GUI.dll
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.pdb
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.genruntimeconfig.cache
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\ref\GUI.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\DAL.Service\\DAL_Service.csproj": {}
+    "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj": {}
   },
   "projects": {
-    "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\DAL.Service\\DAL_Service.csproj": {
+    "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\DAL.Service\\DAL_Service.csproj",
+        "projectUniqueName": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj",
         "projectName": "DAL_Service",
-        "projectPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\DAL.Service\\DAL_Service.csproj",
+        "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj",
         "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\DAL.Service\\obj\\",
+        "outputPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\DTO_Model\\DTO_Model.csproj": {
-                "projectPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\DTO_Model\\DTO_Model.csproj"
+              "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {
+                "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj"
               },
-              "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\UTIL_Valication\\UTIL_Valication.csproj": {
-                "projectPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\UTIL_Valication\\UTIL_Valication.csproj"
+              "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj": {
+                "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\DTO_Model\\DTO_Model.csproj": {
+    "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\DTO_Model\\DTO_Model.csproj",
+        "projectUniqueName": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
         "projectName": "DTO_Model",
-        "projectPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\DTO_Model\\DTO_Model.csproj",
+        "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
         "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\DTO_Model\\obj\\",
+        "outputPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -141,14 +141,14 @@
         }
       }
     },
-    "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\UTIL_Valication\\UTIL_Valication.csproj": {
+    "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\UTIL_Valication\\UTIL_Valication.csproj",
+        "projectUniqueName": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
         "projectName": "UTIL_Valication",
-        "projectPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\UTIL_Valication\\UTIL_Valication.csproj",
+        "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
         "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\UTIL_Valication\\obj\\",
+        "outputPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -168,7 +168,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {
+                "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
