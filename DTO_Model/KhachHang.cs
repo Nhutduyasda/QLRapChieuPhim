@@ -8,10 +8,10 @@ namespace DTO_Model
 {
      public class KhachHang
     {
-        public string MaKhachHang { get; set; }
-        public string TenKhachHang { get; set; }
-        public string SoDienThoai { get; set; }
-        public string Email { get; set; }
-        public string MatKhau { get; set; }
+        public string? MaKhachHang { get; set; }
+        public string? TenKhachHang { get; set; }
+        public string? SoDienThoai { get; set; }
+        public string? Email { get; set; }
+        public string? MatKhau { get; set; }
     }
 }

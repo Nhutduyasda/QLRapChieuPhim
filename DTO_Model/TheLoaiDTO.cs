@@ -8,9 +8,9 @@ namespace DTO_Model
 {
     public class TheLoaiDTO
     {
-        public string MaTheLoai { get; set; }
-        public string TenTheLoai { get; set; }
-        public string MoTa { get; set; }
+        public string? MaTheLoai { get; set; }
+        public string? TenTheLoai { get; set; }
+        public string? MoTa { get; set; }
 
     }
 }

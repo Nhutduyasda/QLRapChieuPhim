@@ -1,0 +1,12 @@
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.csproj.AssemblyReference.cache
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.AssemblyInfoInputs.cache
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.AssemblyInfo.cs
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.csproj.CoreCompileInputs.cache
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.sourcelink.json
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\DAL.Service\obj\Debug\net8.0\DAL_Service.csproj.AssemblyReference.cache
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\DAL.Service\obj\Debug\net8.0\DAL_Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\DAL.Service\obj\Debug\net8.0\DAL_Service.AssemblyInfoInputs.cache
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\DAL.Service\obj\Debug\net8.0\DAL_Service.AssemblyInfo.cs
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\DAL.Service\obj\Debug\net8.0\DAL_Service.csproj.CoreCompileInputs.cache
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\DAL.Service\obj\Debug\net8.0\DAL_Service.sourcelink.json

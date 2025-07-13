@@ -8,12 +8,13 @@ namespace DTO_Model
 {
     public class NhanVienDTO
     {
-        public string MaNhanVien { get; set; }
-        public string TenNhanVien { get; set; }
-        public string ChucVu { get; set; }
-        public string SoDienThoai { get; set; }
-        public string Email { get; set; }
-        public string MatKhau { get; set; }
+        public string? MaNhanVien { get; set; }
+        public string? MaRapChieu { get; set; }
+        public string? TenNhanVien { get; set; }
+        public string? ChucVu { get; set; }
+        public string? SoDienThoai { get; set; }
+        public string? Email { get; set; }
+        public string? MatKhau { get; set; }
 
     }
 }

@@ -8,8 +8,8 @@ namespace DTO_Model
 {
     public class DienVienDTO
     {
-        public string MaDienVien { get; set; }
-        public string TenDienVien { get; set; }
-        public string TieuSu { get; set; }
+        public string? MaDienVien { get; set; }
+        public string? TenDienVien { get; set; }
+        public string? TieuSu { get; set; }
     }
 }

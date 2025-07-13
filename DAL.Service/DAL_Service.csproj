@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DTO_Model\DTO_Model.csproj" />
+    <ProjectReference Include="..\UTIL_Valication\UTIL_Valication.csproj" />
+  </ItemGroup>
+
 </Project>

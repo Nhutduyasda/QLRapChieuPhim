@@ -1,0 +1,12 @@
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.csproj.AssemblyReference.cache
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.GeneratedMSBuildEditorConfig.editorconfig
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.AssemblyInfoInputs.cache
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.AssemblyInfo.cs
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.csproj.CoreCompileInputs.cache
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.sourcelink.json
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.csproj.AssemblyReference.cache
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.GeneratedMSBuildEditorConfig.editorconfig
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.AssemblyInfoInputs.cache
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.AssemblyInfo.cs
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.csproj.CoreCompileInputs.cache
+E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\QLRapChieuPhim2\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.sourcelink.json

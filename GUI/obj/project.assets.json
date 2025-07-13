@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim\\GUI\\GUI_View.csproj",
+      "projectUniqueName": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\GUI\\GUI_View.csproj",
       "projectName": "GUI_View",
-      "projectPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim\\GUI\\GUI_View.csproj",
+      "projectPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\GUI\\GUI_View.csproj",
       "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-      "outputPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim\\GUI\\obj\\",
+      "outputPath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\GUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

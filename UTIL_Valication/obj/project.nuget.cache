@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n/ATdTcYOxU=",
+  "dgSpecHash": "ma/+djz6/jE=",
   "success": true,
-  "projectFilePath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
+  "projectFilePath": "E:\\FPT POLYTECHNIC\\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\\QL Rạp Chiếu Phim\\QLRapChieuPhim2\\UTIL_Valication\\UTIL_Valication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nhutduy\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\nhutduy\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

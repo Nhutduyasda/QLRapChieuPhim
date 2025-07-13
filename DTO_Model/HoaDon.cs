@@ -8,10 +8,10 @@ namespace DTO_Model
 {
     public class HoaDon
     {
-        public string MaHoaDon { get; set; }
-        public string MaKhachHang { get; set; }
+        public string? MaHoaDon { get; set; }
+        public string? MaKhachHang { get; set; }
         public DateTime NgayLapHoaDon { get; set; }
         public decimal TongTien { get; set; }
-        public string TrangThai { get; set; }
+        public string? TrangThai { get; set; }
     }
 }
