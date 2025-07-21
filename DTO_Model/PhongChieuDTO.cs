@@ -11,7 +11,7 @@ namespace DTO_Model
         public string? MaPhongChieu { get; set; }
         public string? MaRapChieu { get; set; }
         public string? TenPhongChieu { get; set; }
-        public int SuaChua { get; set; }
+        public int SucChua { get; set; }
 
     }
 }

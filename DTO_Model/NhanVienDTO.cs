@@ -9,7 +9,6 @@ namespace DTO_Model
     public class NhanVienDTO
     {
         public string? MaNhanVien { get; set; }
-        public string? MaRapChieu { get; set; }
         public string? TenNhanVien { get; set; }
         public string? ChucVu { get; set; }
         public string? SoDienThoai { get; set; }

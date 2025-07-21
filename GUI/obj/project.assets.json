@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
+      "projectUniqueName": "C:\\Users\\nhutduy\\OneDrive\\Documents\\QLRapChieuPhim\\GUI\\GUI.csproj",
       "projectName": "GUI",
-      "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
+      "projectPath": "C:\\Users\\nhutduy\\OneDrive\\Documents\\QLRapChieuPhim\\GUI\\GUI.csproj",
       "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\obj\\",
+      "outputPath": "C:\\Users\\nhutduy\\OneDrive\\Documents\\QLRapChieuPhim\\GUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
