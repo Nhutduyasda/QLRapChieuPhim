@@ -40,15 +40,11 @@ namespace DAL_Service
                     {
                         MaPhim = reader["MaPhim"].ToString(),
                         MaRapChieu = reader["MaRapChieu"].ToString(),
-                        MaDaoDien = reader["MaDaoDien"].ToString(),
-                        MaDienVien = reader["MaDienVien"].ToString(),
-                        MaTheLoai = reader["MaTheLoai"].ToString(),
                         HinhAnh = reader["HinhAnh"].ToString(),
-                        TenPhim = reader["TieuDe"].ToString(),
+                        TieuDe = reader["TieuDe"].ToString(),
                         MoTa = reader["MoTa"].ToString(),
                         ThoiLuong = reader["ThoiLuong"] != DBNull.Value ? Convert.ToInt32(reader["ThoiLuong"]) : 0,
                         NgayPhatHanh = reader["NgayPhatHanh"] != DBNull.Value ? Convert.ToDateTime(reader["NgayPhatHanh"]).ToString("yyyy-MM-dd") : string.Empty,
-                        NgonNgu = reader["NgonNgu"].ToString(),
                         DoTuoi = reader["DoTuoi"].ToString(),
                     };
                     list.Add(phim);
@@ -63,41 +59,31 @@ namespace DAL_Service
         }
         public override void Insert(PhimDTO entity)
         {
-            string sql = "INSERT INTO PHIM (MaPhim, MaRapChieu, MaDaoDien, MaDienVien, MaTheLoai, HinhAnh, TieuDe, MoTa, ThoiLuong, NgayPhatHanh, NgonNgu, DoTuoi)" +
-                " VALUES (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11)";
+            string sql = "INSERT INTO PHIM (MaPhim, MaRapChieu, HinhAnh, TieuDe, MoTa, ThoiLuong, NgayPhatHanh, DoTuoi)" +
+                " VALUES (@0, @1, @2, @3, @4, @5, @6, @7)";
             List<object> parameters = new List<object>
             {
                 entity.MaPhim,
                 entity.MaRapChieu,
-                entity.MaDaoDien,
-                entity.MaDienVien,
-                entity.MaTheLoai,
                 entity.HinhAnh,
-                entity.TenPhim,
                 entity.MoTa,
                 entity.ThoiLuong,
                 entity.NgayPhatHanh,
-                entity.NgonNgu,
                 entity.DoTuoi
             };
             DBUTIL.Update(sql, parameters);
         }
         public override void Update(PhimDTO entity)
         {
-            string sql = "UPDATE PHIM SET MaRapChieu = @1, MaDaoDien = @2, MaDienVien = @3, MaTheLoai = @4, HinhAnh = @5, TieuDe = @6, MoTa = @7, ThoiLuong = @8, NgayPhatHanh = @9, NgonNgu = @10, DoTuoi = @11 WHERE MaPhim = @0";
+            string sql = "UPDATE PHIM SET MaRapChieu = @1, HinhAnh = @2, TieuDe = @3, MoTa = @4, ThoiLuong = @5, NgayPhatHanh = @6, MoTa = @7 WHERE MaPhim = @0";
             List<object> parameters = new List<object>
             {
                 entity.MaPhim,
                 entity.MaRapChieu,
-                entity.MaDaoDien,
-                entity.MaDienVien,
-                entity.MaTheLoai,
                 entity.HinhAnh,
-                entity.TenPhim,
                 entity.MoTa,
                 entity.ThoiLuong,
                 entity.NgayPhatHanh,
-                entity.NgonNgu,
                 entity.DoTuoi
             };
             DBUTIL.Update(sql, parameters);
@@ -108,5 +94,5 @@ namespace DAL_Service
             List<object> parameters = new List<object> { id };
             DBUTIL.Update(sql, parameters);
         }
-     }
+    }
 }

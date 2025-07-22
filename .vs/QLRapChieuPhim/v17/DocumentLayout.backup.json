@@ -3,40 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\dal.service\\phimdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|solutionrelative:dal.service\\phimdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\dal.service\\nhanviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|solutionrelative:dal.service\\nhanviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037BC4DA-B15E-45CC-BF2A-8D93A181DF7B}|GUI\\GUI.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\gui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{037BC4DA-B15E-45CC-BF2A-8D93A181DF7B}|GUI\\GUI.csproj|solutionrelative:gui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{037BC4DA-B15E-45CC-BF2A-8D93A181DF7B}|GUI\\GUI.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{037BC4DA-B15E-45CC-BF2A-8D93A181DF7B}|GUI\\GUI.csproj|solutionrelative:gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{037BC4DA-B15E-45CC-BF2A-8D93A181DF7B}|GUI\\GUI.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{037BC4DA-B15E-45CC-BF2A-8D93A181DF7B}|GUI\\GUI.csproj|solutionrelative:gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44945B68-8E55-47CC-9F15-157ED0C53F6A}|DTO_Model\\DTO_Model.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\dto_model\\dto_model.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{44945B68-8E55-47CC-9F15-157ED0C53F6A}|DTO_Model\\DTO_Model.csproj|solutionrelative:dto_model\\dto_model.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\dal.service\\dal_service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|solutionrelative:dal.service\\dal_service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D74EFD91-E6C0-4C56-8A3B-496EB22AEE14}|UTIL_Valication\\UTIL_Valication.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\util_valication\\dbutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D74EFD91-E6C0-4C56-8A3B-496EB22AEE14}|UTIL_Valication\\UTIL_Valication.csproj|solutionrelative:util_valication\\dbutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{037BC4DA-B15E-45CC-BF2A-8D93A181DF7B}|GUI\\GUI.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\gui\\gui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{037BC4DA-B15E-45CC-BF2A-8D93A181DF7B}|GUI\\GUI.csproj|solutionrelative:gui\\gui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\dal.service\\khachhangdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|solutionrelative:dal.service\\khachhangdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\dal.service\\daodiendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|solutionrelative:dal.service\\daodiendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{037BC4DA-B15E-45CC-BF2A-8D93A181DF7B}|GUI\\GUI.csproj|C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\gui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{037BC4DA-B15E-45CC-BF2A-8D93A181DF7B}|GUI\\GUI.csproj|solutionrelative:gui\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D74EFD91-E6C0-4C56-8A3B-496EB22AEE14}|UTIL_Valication\\UTIL_Valication.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\util_valication\\util_valication.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D74EFD91-E6C0-4C56-8A3B-496EB22AEE14}|UTIL_Valication\\UTIL_Valication.csproj|solutionrelative:util_valication\\util_valication.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{44945B68-8E55-47CC-9F15-157ED0C53F6A}|DTO_Model\\DTO_Model.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\dto_model\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44945B68-8E55-47CC-9F15-157ED0C53F6A}|DTO_Model\\DTO_Model.csproj|solutionrelative:dto_model\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44945B68-8E55-47CC-9F15-157ED0C53F6A}|DTO_Model\\DTO_Model.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\dto_model\\ghedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44945B68-8E55-47CC-9F15-157ED0C53F6A}|DTO_Model\\DTO_Model.csproj|solutionrelative:dto_model\\ghedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44945B68-8E55-47CC-9F15-157ED0C53F6A}|DTO_Model\\DTO_Model.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\dto_model\\datvedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44945B68-8E55-47CC-9F15-157ED0C53F6A}|DTO_Model\\DTO_Model.csproj|solutionrelative:dto_model\\datvedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|c:\\users\\nhutduy\\source\\repos\\qlrapchieuphim\\dal.service\\systemdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7748CF28-BE6E-45EB-A3BF-86F09364D2E8}|DAL.Service\\DAL_Service.csproj|solutionrelative:dal.service\\systemdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{037BC4DA-B15E-45CC-BF2A-8D93A181DF7B}|GUI\\GUI.csproj|C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{037BC4DA-B15E-45CC-BF2A-8D93A181DF7B}|GUI\\GUI.csproj|solutionrelative:gui\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,131 +54,168 @@
       "DocumentGroups": [
         {
           "DockedWidth": 173,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DTO_Model",
-              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
-              "RelativeDocumentMoniker": "DTO_Model\\DTO_Model.csproj",
-              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
-              "RelativeToolTip": "DTO_Model\\DTO_Model.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-13T11:38:21.854Z",
+              "DocumentIndex": 1,
+              "Title": "NhanVienDAL.cs",
+              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\NhanVienDAL.cs",
+              "RelativeDocumentMoniker": "DAL.Service\\NhanVienDAL.cs",
+              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\NhanVienDAL.cs",
+              "RelativeToolTip": "DAL.Service\\NhanVienDAL.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAowGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T02:31:54.196Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\Program.cs",
-              "RelativeDocumentMoniker": "GUI\\Program.cs",
-              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\Program.cs",
-              "RelativeToolTip": "GUI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "Title": "PhimDAL.cs",
+              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\PhimDAL.cs",
+              "RelativeDocumentMoniker": "DAL.Service\\PhimDAL.cs",
+              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\PhimDAL.cs",
+              "RelativeToolTip": "DAL.Service\\PhimDAL.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAowEsAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T11:37:45.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GUI",
-              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
-              "RelativeDocumentMoniker": "GUI\\GUI.csproj",
-              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
-              "RelativeToolTip": "GUI\\GUI.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-13T11:37:24.493Z",
+              "WhenOpened": "2025-07-22T02:31:26.391Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "HoaDon.cs",
+              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\HoaDon.cs",
+              "RelativeDocumentMoniker": "DTO_Model\\HoaDon.cs",
+              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\HoaDon.cs",
+              "RelativeToolTip": "DTO_Model\\HoaDon.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T01:47:54.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GheDTO.cs",
+              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\GheDTO.cs",
+              "RelativeDocumentMoniker": "DTO_Model\\GheDTO.cs",
+              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\GheDTO.cs",
+              "RelativeToolTip": "DTO_Model\\GheDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T01:47:54.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DatVeDTO.cs",
+              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DatVeDTO.cs",
+              "RelativeDocumentMoniker": "DTO_Model\\DatVeDTO.cs",
+              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DatVeDTO.cs",
+              "RelativeToolTip": "DTO_Model\\DatVeDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T01:47:53.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\Main.cs",
+              "RelativeDocumentMoniker": "GUI\\Main.cs",
+              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\Main.cs",
+              "RelativeToolTip": "GUI\\Main.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAApwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T01:03:59.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\Program.cs",
+              "RelativeDocumentMoniker": "GUI\\Program.cs",
+              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\Program.cs",
+              "RelativeToolTip": "GUI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T00:50:05.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SystemDAL.cs",
+              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\SystemDAL.cs",
+              "RelativeDocumentMoniker": "DAL.Service\\SystemDAL.cs",
+              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\SystemDAL.cs",
+              "RelativeToolTip": "DAL.Service\\SystemDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T00:40:02.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "KhachHangDAL.cs",
               "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\KhachHangDAL.cs",
               "RelativeDocumentMoniker": "DAL.Service\\KhachHangDAL.cs",
               "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\KhachHangDAL.cs",
               "RelativeToolTip": "DAL.Service\\KhachHangDAL.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T11:37:23.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T00:36:23.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UTIL_Valication",
-              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
-              "RelativeDocumentMoniker": "UTIL_Valication\\UTIL_Valication.csproj",
-              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
-              "RelativeToolTip": "UTIL_Valication\\UTIL_Valication.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-13T11:33:28.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DaoDienDAL.cs",
-              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DaoDienDAL.cs",
-              "RelativeDocumentMoniker": "DAL.Service\\DaoDienDAL.cs",
-              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DaoDienDAL.cs",
-              "RelativeToolTip": "DAL.Service\\DaoDienDAL.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCcAAAARAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Main.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\Main.cs",
+              "RelativeDocumentMoniker": "GUI\\Main.cs",
+              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\Main.cs [Design]",
+              "RelativeToolTip": "GUI\\Main.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T11:32:55.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T00:36:07.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DAL_Service",
-              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj",
-              "RelativeDocumentMoniker": "DAL.Service\\DAL_Service.csproj",
-              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj",
-              "RelativeToolTip": "DAL.Service\\DAL_Service.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-07-13T11:32:52.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DBUTIL.cs",
-              "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\DBUTIL.cs",
-              "RelativeDocumentMoniker": "UTIL_Valication\\DBUTIL.cs",
-              "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\DBUTIL.cs",
-              "RelativeToolTip": "UTIL_Valication\\DBUTIL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T11:32:46.179Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\Form1.cs",
               "RelativeDocumentMoniker": "GUI\\Form1.cs",
               "ToolTip": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\Form1.cs [Design]",
               "RelativeToolTip": "GUI\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T11:32:25.786Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-22T00:36:06.411Z"
             }
           ]
         }

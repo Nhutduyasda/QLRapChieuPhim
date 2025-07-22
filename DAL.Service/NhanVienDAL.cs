@@ -40,7 +40,6 @@ namespace DAL_Service
                     NhanVienDTO nhanVien = new NhanVienDTO
                     {
                         MaNhanVien = reader["MaNhanVien"].ToString(),
-                        MaRapChieu = reader["MaRapChieu"].ToString(),
                         TenNhanVien = reader["TenNhanVien"].ToString(),
                         ChucVu = reader["ChucVu"].ToString(),
                         SoDienThoai = reader["SoDienThoai"].ToString(),
@@ -59,11 +58,10 @@ namespace DAL_Service
         }
         public override void Insert(NhanVienDTO entity)
         {
-            string sql = "INSERT INTO NHAN_VIEN (MaNhanVien, MaRapChieu, TenNhanVien, ChucVu, SoDienThoai, Email, MatKhauHash) VALUES (@0, @1, @2, @3, @4, @5, @6)";
+            string sql = "INSERT INTO NHAN_VIEN (MaNhanVien, TenNhanVien, ChucVu, SoDienThoai, Email, MatKhauHash) VALUES (@0, @1, @2, @3, @4, @5)";
             List<object> parameters = new List<object>
             {
                 entity.MaNhanVien,
-                entity.MaRapChieu,
                 entity.TenNhanVien,
                 entity.ChucVu,
                 entity.SoDienThoai,
@@ -75,11 +73,10 @@ namespace DAL_Service
 
         public override void Update(NhanVienDTO entity)
         {
-            string sql = "UPDATE NHAN_VIEN SET MaRapChieu = @1, TenNhanVien = @2, ChucVu = @3, SoDienThoai = @4, Email = @5, MatKhauHash = @6 WHERE MaNhanVien = @0";
+            string sql = "UPDATE NHAN_VIEN SET enNhanVien = @1, ChucVu = @2, SoDienThoai = @3, Email = @4, MatKhauHash = @5 WHERE MaNhanVien = @0";
             List<object> parameters = new List<object>
             {
                 entity.MaNhanVien,
-                entity.MaRapChieu,
                 entity.TenNhanVien,
                 entity.ChucVu,
                 entity.SoDienThoai,
@@ -95,5 +92,5 @@ namespace DAL_Service
             DBUTIL.Update(sql, args);
 
         }
-    }   
+    }
 }

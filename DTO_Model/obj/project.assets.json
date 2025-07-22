@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nhutduy\\OneDrive\\Documents\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
+      "projectUniqueName": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
       "projectName": "DTO_Model",
-      "projectPath": "C:\\Users\\nhutduy\\OneDrive\\Documents\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
+      "projectPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
       "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nhutduy\\OneDrive\\Documents\\QLRapChieuPhim\\DTO_Model\\obj\\",
+      "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
