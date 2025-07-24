@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class DangNhap
+    partial class frmDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnThoat = new Button();
             label3 = new Label();
             label2 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            checkBox1 = new CheckBox();
-            button2 = new Button();
+            txtTaiKhoan = new TextBox();
+            txtMatKhau = new TextBox();
+            chkHienThi = new CheckBox();
+            btnDangNhap = new Button();
             label1 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -42,12 +43,13 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+            groupBox1.Controls.Add(btnThoat);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(checkBox1);
-            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(txtTaiKhoan);
+            groupBox1.Controls.Add(txtMatKhau);
+            groupBox1.Controls.Add(chkHienThi);
+            groupBox1.Controls.Add(btnDangNhap);
             groupBox1.Controls.Add(label1);
             groupBox1.Cursor = Cursors.Cross;
             groupBox1.Location = new Point(63, 40);
@@ -56,6 +58,18 @@
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
+            // 
+            // btnThoat
+            // 
+            btnThoat.BackColor = Color.SeaGreen;
+            btnThoat.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnThoat.ForeColor = Color.White;
+            btnThoat.Location = new Point(303, 326);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(127, 42);
+            btnThoat.TabIndex = 9;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -79,42 +93,42 @@
             label2.TabIndex = 7;
             label2.Text = "Tài khoản";
             // 
-            // textBox2
+            // txtTaiKhoan
             // 
-            textBox2.Location = new Point(181, 128);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(249, 27);
-            textBox2.TabIndex = 5;
+            txtTaiKhoan.Location = new Point(181, 128);
+            txtTaiKhoan.Name = "txtTaiKhoan";
+            txtTaiKhoan.Size = new Size(249, 27);
+            txtTaiKhoan.TabIndex = 5;
             // 
-            // textBox1
+            // txtMatKhau
             // 
-            textBox1.Location = new Point(181, 195);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(249, 27);
-            textBox1.TabIndex = 4;
+            txtMatKhau.Location = new Point(181, 195);
+            txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.Size = new Size(249, 27);
+            txtMatKhau.TabIndex = 4;
             // 
-            // checkBox1
+            // chkHienThi
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(344, 256);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(86, 24);
-            checkBox1.TabIndex = 3;
-            checkBox1.Text = "Hiển thị";
-            checkBox1.UseVisualStyleBackColor = true;
+            chkHienThi.AutoSize = true;
+            chkHienThi.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            chkHienThi.Location = new Point(344, 256);
+            chkHienThi.Name = "chkHienThi";
+            chkHienThi.Size = new Size(86, 24);
+            chkHienThi.TabIndex = 3;
+            chkHienThi.Text = "Hiển thị";
+            chkHienThi.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnDangNhap
             // 
-            button2.BackColor = Color.SeaGreen;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(200, 326);
-            button2.Name = "button2";
-            button2.Size = new Size(127, 42);
-            button2.TabIndex = 2;
-            button2.Text = "Đăng nhập";
-            button2.UseVisualStyleBackColor = false;
+            btnDangNhap.BackColor = Color.SeaGreen;
+            btnDangNhap.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDangNhap.ForeColor = Color.White;
+            btnDangNhap.Location = new Point(48, 326);
+            btnDangNhap.Name = "btnDangNhap";
+            btnDangNhap.Size = new Size(127, 42);
+            btnDangNhap.TabIndex = 2;
+            btnDangNhap.Text = "Đăng nhập";
+            btnDangNhap.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -128,14 +142,14 @@
             label1.TabIndex = 0;
             label1.Text = "ĐĂNG NHẬP";
             // 
-            // DangNhap
+            // frmDangNhap
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
             ClientSize = new Size(651, 550);
             Controls.Add(groupBox1);
-            Name = "DangNhap";
+            Name = "frmDangNhap";
             Text = "DangNhap";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -147,10 +161,11 @@
         private GroupBox groupBox1;
         private Label label3;
         private Label label2;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private CheckBox checkBox1;
-        private Button button2;
+        private TextBox txtTaiKhoan;
+        private TextBox txtMatKhau;
+        private CheckBox chkHienThi;
+        private Button btnDangNhap;
         private Label label1;
+        private Button btnThoat;
     }
 }
