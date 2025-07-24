@@ -129,6 +129,7 @@
             btnMuaVe.TabIndex = 3;
             btnMuaVe.Text = "Mua Vé";
             btnMuaVe.UseVisualStyleBackColor = true;
+            btnMuaVe.Click += btnMuaVe_Click;
             // 
             // btnThemNhanVien
             // 

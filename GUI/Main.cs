@@ -55,5 +55,10 @@ namespace GUI
         {
             ShowFormInPanel(new PhimDaThem());
         }
+
+        private void btnMuaVe_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new frmMuaVe());
+        }
     }
 }

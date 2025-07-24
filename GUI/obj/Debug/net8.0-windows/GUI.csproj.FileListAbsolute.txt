@@ -78,3 +78,5 @@ C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.Th
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.ThongTinNhanVien.resources
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.csproj.Up2Date
 C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.frmDangNhap.resources
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.FrmDatVe.resources
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.frmMuaVe.resources

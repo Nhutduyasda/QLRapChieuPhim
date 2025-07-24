@@ -11,7 +11,7 @@
         "projectName": "DTO_Model",
         "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
         "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\obj\\",
+        "outputPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -76,7 +76,7 @@
         "projectName": "UTIL_Valication",
         "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
         "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\UTIL_Valication\\obj\\",
+        "outputPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
