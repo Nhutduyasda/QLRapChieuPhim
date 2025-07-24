@@ -117,6 +117,7 @@
             chkHienThi.TabIndex = 3;
             chkHienThi.Text = "Hiển thị";
             chkHienThi.UseVisualStyleBackColor = true;
+            chkHienThi.CheckedChanged += chkHienThi_CheckedChanged_1;
             // 
             // btnDangNhap
             // 

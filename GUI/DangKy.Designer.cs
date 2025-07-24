@@ -139,6 +139,7 @@
             checkBox1.TabIndex = 3;
             checkBox1.Text = "Hiển thị";
             checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // button2
             // 

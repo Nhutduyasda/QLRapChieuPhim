@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongTinNhanVien));
             label1 = new Label();
             label2 = new Label();
             lblEmail = new Label();
@@ -47,7 +48,9 @@
             txtEmail = new TextBox();
             txtMatKhau = new TextBox();
             lblMatKhau = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgvDanhSachNV).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -225,6 +228,7 @@
             // 
             txtMatKhau.Location = new Point(42, 373);
             txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.PasswordChar = '●';
             txtMatKhau.Size = new Size(241, 27);
             txtMatKhau.TabIndex = 19;
             // 
@@ -238,11 +242,23 @@
             lblMatKhau.TabIndex = 18;
             lblMatKhau.Text = "Mật khẩu";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(289, 373);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(36, 27);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 20;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // ThongTinNhanVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 716);
+            Controls.Add(pictureBox1);
             Controls.Add(txtMatKhau);
             Controls.Add(lblMatKhau);
             Controls.Add(txtEmail);
@@ -266,6 +282,7 @@
             Text = "NhanVien";
             Load += ThongTinNhanVien_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDanhSachNV).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -291,5 +308,6 @@
         private TextBox txtEmail;
         private TextBox txtMatKhau;
         private Label lblMatKhau;
+        private PictureBox pictureBox1;
     }
 }

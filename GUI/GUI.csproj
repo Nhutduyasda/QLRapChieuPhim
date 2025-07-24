@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DAL.Service\DAL_Service.csproj" />
+    <ProjectReference Include="..\DTO_Model\DTO_Model.csproj" />
   </ItemGroup>
 
 </Project>

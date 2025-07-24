@@ -34,5 +34,14 @@ namespace UTIL_Valication
 
             return Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@gmail\.com$");
         }
+
+        //Kiểm tra mật khẩu có gồm 6 ký tự gồm chữ và số không
+        public static bool IsValidPassword(string password)
+        {
+            if (string.IsNullOrWhiteSpace(password))
+                return false;
+            // Kiểm tra độ dài tối thiểu 6 ký tự và có ít nhất một chữ cái và một chữ số
+            return Regex.IsMatch(password, @"^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}$");
+        }
     }
 }

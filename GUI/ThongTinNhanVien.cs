@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAL_Service;
+using DTO_Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAL_Service;
-using DTO_Model;
+using UTIL_Valication;
 
 namespace GUI
 {
@@ -92,6 +93,27 @@ namespace GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            // Kiểm tra số điện thoại
+            if (!Valication.IsValidPhoneNumber(txtSoDienThoai.Text))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra email
+            if (!Valication.IsValidGmail(txtEmail.Text))
+            {
+                MessageBox.Show("Email phải là Gmail hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra mật khẩu
+            if (!Valication.IsValidPassword(txtMatKhau.Text))
+            {
+                MessageBox.Show("Mật khẩu không được để trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 NhanVienDTO nhanVien = new NhanVienDTO
@@ -189,6 +211,14 @@ namespace GUI
             LoadDSNhanVien();
             MessageBox.Show("Đã làm mới danh sách nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private bool isPasswordVisible = false;
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            isPasswordVisible = !isPasswordVisible;
+            txtMatKhau.PasswordChar = isPasswordVisible ? '\0' : '●';
         }
     }
 }

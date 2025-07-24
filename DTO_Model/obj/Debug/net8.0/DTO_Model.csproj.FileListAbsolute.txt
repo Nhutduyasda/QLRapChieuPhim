@@ -34,3 +34,15 @@ C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\DTO_Model\obj\Debug\net8.0\DTO_Mode
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\DTO_Model\obj\Debug\net8.0\refint\DTO_Model.dll
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\DTO_Model\obj\Debug\net8.0\DTO_Model.pdb
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\DTO_Model\obj\Debug\net8.0\ref\DTO_Model.dll
+C:\Users\Dell inspiron\Desktop\DuAn1\DTO_Model\bin\Debug\net8.0\DTO_Model.deps.json
+C:\Users\Dell inspiron\Desktop\DuAn1\DTO_Model\bin\Debug\net8.0\DTO_Model.dll
+C:\Users\Dell inspiron\Desktop\DuAn1\DTO_Model\bin\Debug\net8.0\DTO_Model.pdb
+C:\Users\Dell inspiron\Desktop\DuAn1\DTO_Model\obj\Debug\net8.0\DTO_Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell inspiron\Desktop\DuAn1\DTO_Model\obj\Debug\net8.0\DTO_Model.AssemblyInfoInputs.cache
+C:\Users\Dell inspiron\Desktop\DuAn1\DTO_Model\obj\Debug\net8.0\DTO_Model.AssemblyInfo.cs
+C:\Users\Dell inspiron\Desktop\DuAn1\DTO_Model\obj\Debug\net8.0\DTO_Model.csproj.CoreCompileInputs.cache
+C:\Users\Dell inspiron\Desktop\DuAn1\DTO_Model\obj\Debug\net8.0\DTO_Model.sourcelink.json
+C:\Users\Dell inspiron\Desktop\DuAn1\DTO_Model\obj\Debug\net8.0\DTO_Model.dll
+C:\Users\Dell inspiron\Desktop\DuAn1\DTO_Model\obj\Debug\net8.0\refint\DTO_Model.dll
+C:\Users\Dell inspiron\Desktop\DuAn1\DTO_Model\obj\Debug\net8.0\DTO_Model.pdb
+C:\Users\Dell inspiron\Desktop\DuAn1\DTO_Model\obj\Debug\net8.0\ref\DTO_Model.dll

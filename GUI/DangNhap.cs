@@ -58,5 +58,9 @@ namespace GUI
             txtMatKhau.PasswordChar = chkHienThi.Checked ? '\0' : '*';
         }
 
+        private void chkHienThi_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

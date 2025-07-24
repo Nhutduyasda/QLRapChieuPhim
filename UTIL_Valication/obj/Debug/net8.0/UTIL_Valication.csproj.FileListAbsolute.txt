@@ -14,3 +14,19 @@ C:\Users\nhutduy\source\repos\QLRapChieuPhim\UTIL_Valication\obj\Debug\net8.0\UT
 C:\Users\nhutduy\source\repos\QLRapChieuPhim\UTIL_Valication\obj\Debug\net8.0\refint\UTIL_Valication.dll
 C:\Users\nhutduy\source\repos\QLRapChieuPhim\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.pdb
 C:\Users\nhutduy\source\repos\QLRapChieuPhim\UTIL_Valication\obj\Debug\net8.0\ref\UTIL_Valication.dll
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\bin\Debug\net8.0\UTIL_Valication.deps.json
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\bin\Debug\net8.0\UTIL_Valication.dll
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\bin\Debug\net8.0\UTIL_Valication.pdb
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\bin\Debug\net8.0\DTO_Model.dll
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\bin\Debug\net8.0\DTO_Model.pdb
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.csproj.AssemblyReference.cache
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.AssemblyInfoInputs.cache
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.AssemblyInfo.cs
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.csproj.CoreCompileInputs.cache
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.sourcelink.json
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\obj\Debug\net8.0\UTIL_Val.B9D3C706.Up2Date
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.dll
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\obj\Debug\net8.0\refint\UTIL_Valication.dll
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\obj\Debug\net8.0\UTIL_Valication.pdb
+C:\Users\Dell inspiron\Desktop\DuAn1\UTIL_Valication\obj\Debug\net8.0\ref\UTIL_Valication.dll
