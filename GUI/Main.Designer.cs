@@ -161,6 +161,7 @@
             btnBangDieuKhien.TabIndex = 0;
             btnBangDieuKhien.Text = "Bảng Điều Khiển";
             btnBangDieuKhien.UseVisualStyleBackColor = true;
+            btnBangDieuKhien.Click += btnBangDieuKhien_Click;
             // 
             // Main
             // 

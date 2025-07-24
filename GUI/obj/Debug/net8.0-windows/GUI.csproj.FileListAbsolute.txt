@@ -72,9 +72,9 @@ C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\bin\Debug\net8.0-windows\UTIL_V
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.csproj.AssemblyReference.cache
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.BaoCaoDoanhThu.resources
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.DangKy.resources
-C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.DangNhap.resources
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.PhimDaThem.resources
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.ThemPhim.resources
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.ThongTinKhachHang.resources
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.ThongTinNhanVien.resources
 C:\Users\nhutduy\Source\Repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.csproj.Up2Date
+C:\Users\nhutduy\source\repos\QLRapChieuPhim\GUI\obj\Debug\net8.0-windows\GUI.frmDangNhap.resources

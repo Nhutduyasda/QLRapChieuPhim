@@ -31,9 +31,9 @@
             panel1 = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
-            dataGridView1 = new DataGridView();
+            dgvDSPhim = new DataGridView();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDSPhim).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -60,22 +60,22 @@
             panel3.Size = new Size(250, 125);
             panel3.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgvDSPhim
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(57, 317);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1049, 341);
-            dataGridView1.TabIndex = 2;
+            dgvDSPhim.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDSPhim.Location = new Point(57, 317);
+            dgvDSPhim.Name = "dgvDSPhim";
+            dgvDSPhim.RowHeadersWidth = 51;
+            dgvDSPhim.Size = new Size(1049, 341);
+            dgvDSPhim.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(57, 267);
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            label1.Location = new Point(57, 263);
             label1.Name = "label1";
-            label1.Size = new Size(105, 23);
+            label1.Size = new Size(175, 38);
             label1.TabIndex = 3;
             label1.Text = "Phim có sẵn";
             // 
@@ -85,13 +85,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 716);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvDSPhim);
             Controls.Add(panel2);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Name = "PhimDaThem";
             Text = "PhimDaThem";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += PhimDaThem_Load_1;
+            ((System.ComponentModel.ISupportInitialize)dgvDSPhim).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -101,7 +102,7 @@
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
-        private DataGridView dataGridView1;
+        private DataGridView dgvDSPhim;
         private Label label1;
     }
 }

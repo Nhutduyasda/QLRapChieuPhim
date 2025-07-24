@@ -50,5 +50,10 @@ namespace GUI
         {
             ShowFormInPanel(new frmDangNhap());
         }
+
+        private void btnBangDieuKhien_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new PhimDaThem());
+        }
     }
 }
