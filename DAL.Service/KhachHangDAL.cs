@@ -42,7 +42,6 @@ namespace DAL_Service
                         TenKhachHang = reader["TenKhachHang"].ToString(),
                         Email = reader["Email"].ToString(),
                         SoDienThoai = reader["SoDienThoai"].ToString(),
-                        MatKhau = reader["MatKhauHash"].ToString(),
 
                     };
                     list.Add(khachHang);
@@ -57,28 +56,26 @@ namespace DAL_Service
         }
         public override void Insert(KhachHang entity)
         {
-            string sql = "INSERT INTO KHACH_HANG (MaKhachHang, TenKhachHang, Email, SoDienThoai, MatKhauHash) VALUES (@0, @1, @2, @3, @4)";
+            string sql = "INSERT INTO KHACH_HANG (MaKhachHang, TenKhachHang, Email, SoDienThoai) VALUES (@0, @1, @2, @3)";
             List<object> parameters = new List<object>
             {
                 entity.MaKhachHang,
                 entity.TenKhachHang,
                 entity.Email,
                 entity.SoDienThoai,
-                entity.MatKhau
             };
             DBUTIL.Update(sql, parameters);
         }
 
         public override void Update(KhachHang entity)
         {
-            string sql = "UPDATE KHACH_HANG SET TenKhachHang = @1, Email = @2, SoDienThoai = @3, MatKhauHash = @4 WHERE MaKhachHang = @0";
+            string sql = "UPDATE KHACH_HANG SET TenKhachHang = @1, Email = @2, SoDienThoai = @3 WHERE MaKhachHang = @0";
             List<object> parameters = new List<object>
             {
                 entity.MaKhachHang,
                 entity.TenKhachHang,
                 entity.Email,
                 entity.SoDienThoai,
-                entity.MatKhau
             };
             DBUTIL.Update(sql, parameters);
         }

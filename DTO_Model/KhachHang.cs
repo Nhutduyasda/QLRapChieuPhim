@@ -12,6 +12,5 @@ namespace DTO_Model
         public string? TenKhachHang { get; set; }
         public string? Email { get; set; }
         public string? SoDienThoai { get; set; }
-        public string? MatKhau { get; set; }
     }
 }

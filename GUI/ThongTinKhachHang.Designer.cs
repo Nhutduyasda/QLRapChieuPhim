@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            label5 = new Label();
+            txtMaKhachHang = new TextBox();
             txtEmail = new TextBox();
             label4 = new Label();
             label3 = new Label();
@@ -37,8 +39,6 @@
             txtSoDienThoai = new TextBox();
             btnLuu = new Button();
             label1 = new Label();
-            label5 = new Label();
-            txtMaKhachHang = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -62,6 +62,25 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = SystemColors.Control;
+            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+            label5.Location = new Point(48, 118);
+            label5.Name = "label5";
+            label5.Size = new Size(136, 23);
+            label5.TabIndex = 12;
+            label5.Text = "Mã Khách Hàng";
+            // 
+            // txtMaKhachHang
+            // 
+            txtMaKhachHang.Location = new Point(188, 114);
+            txtMaKhachHang.Name = "txtMaKhachHang";
+            txtMaKhachHang.ReadOnly = true;
+            txtMaKhachHang.Size = new Size(249, 27);
+            txtMaKhachHang.TabIndex = 11;
             // 
             // txtEmail
             // 
@@ -128,6 +147,7 @@
             btnLuu.TabIndex = 2;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = false;
+            btnLuu.Click += btnLuu_Click_1;
             // 
             // label1
             // 
@@ -140,25 +160,6 @@
             label1.Size = new Size(368, 38);
             label1.TabIndex = 0;
             label1.Text = "THÔNG TIN KHÁCH HÀNG";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = SystemColors.Control;
-            label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
-            label5.Location = new Point(48, 118);
-            label5.Name = "label5";
-            label5.Size = new Size(136, 23);
-            label5.TabIndex = 12;
-            label5.Text = "Mã Khách Hàng";
-            // 
-            // txtMaKhachHang
-            // 
-            txtMaKhachHang.Location = new Point(188, 114);
-            txtMaKhachHang.Name = "txtMaKhachHang";
-            txtMaKhachHang.ReadOnly = true;
-            txtMaKhachHang.Size = new Size(249, 27);
-            txtMaKhachHang.TabIndex = 11;
             // 
             // ThongTinKhachHang
             // 
