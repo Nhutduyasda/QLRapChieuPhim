@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj": {}
+    "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\DAL_Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj": {
+    "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\DAL_Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj",
+        "projectUniqueName": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\DAL_Service.csproj",
         "projectName": "DAL_Service",
-        "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj",
-        "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DAL.Service\\obj\\",
+        "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\DAL_Service.csproj",
+        "packagesPath": "C:\\Users\\Dell inspiron\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nhutduy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell inspiron\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,11 +32,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {
-                "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj"
+              "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj": {
+                "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj"
               },
-              "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj": {
-                "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj"
+              "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\UTIL_Valication\\UTIL_Valication.csproj": {
+                "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\UTIL_Valication\\UTIL_Valication.csproj"
               }
             }
           }
@@ -51,7 +51,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -72,24 +72,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {
+    "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
+        "projectUniqueName": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj",
         "projectName": "DTO_Model",
-        "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
-        "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\obj\\",
+        "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj",
+        "packagesPath": "C:\\Users\\Dell inspiron\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nhutduy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell inspiron\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -116,7 +116,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -137,24 +137,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj": {
+    "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\UTIL_Valication\\UTIL_Valication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
+        "projectUniqueName": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\UTIL_Valication\\UTIL_Valication.csproj",
         "projectName": "UTIL_Valication",
-        "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
-        "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\UTIL_Valication\\obj\\",
+        "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\UTIL_Valication\\UTIL_Valication.csproj",
+        "packagesPath": "C:\\Users\\Dell inspiron\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\UTIL_Valication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nhutduy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell inspiron\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -169,8 +169,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {
-                "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj"
+              "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj": {
+                "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj"
               }
             }
           }
@@ -185,7 +185,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -212,7 +212,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
