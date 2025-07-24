@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {}
+    "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {
+    "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
+        "projectUniqueName": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
         "projectName": "DTO_Model",
-        "projectPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
+        "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
         "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\obj\\",
         "projectStyle": "PackageReference",

@@ -1725,9 +1725,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
+      "projectUniqueName": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
       "projectName": "GUI",
-      "projectPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
+      "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
       "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\GUI\\obj\\",
       "projectStyle": "PackageReference",
@@ -1750,8 +1750,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj": {
-              "projectPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj"
+            "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj": {
+              "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj"
             }
           }
         }

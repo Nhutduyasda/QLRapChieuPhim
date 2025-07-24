@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D9qZKOHT+Ak=",
+  "dgSpecHash": "T1cyTjlgrVY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
+  "projectFilePath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nhutduy\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\nhutduy\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
