@@ -86,6 +86,7 @@ namespace GUI
                 txtSoDienThoai.Text = row.Cells["SoDienThoai"].Value.ToString();
                 txtEmail.Text = row.Cells["Email"].Value.ToString();
                 cboChucVu.Text = row.Cells["ChucVu"].Value.ToString();
+                txtMatKhau.Text = row.Cells["MatKhau"].Value.ToString();
 
             }
 

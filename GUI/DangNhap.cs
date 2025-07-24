@@ -53,14 +53,18 @@ namespace GUI
 
 
 
-        private void chkHienThi_CheckedChanged(object sender, EventArgs e)
-        {
-            txtMatKhau.PasswordChar = chkHienThi.Checked ? '\0' : '*';
-        }
+       
+       
 
-        private void chkHienThi_CheckedChanged_1(object sender, EventArgs e)
+        private bool isPasswordVisible = false;
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+            isPasswordVisible = !isPasswordVisible;
+            txtMatKhau.PasswordChar = isPasswordVisible ? '\0' : '●';
         }
+        
+       
     }
 }

@@ -32,8 +32,8 @@ namespace GUI
         public void LoadCombox()
         {
             cboDoTuoi.Items.Clear();
-            cboDoTuoi.Items.Add(">18");
-            cboDoTuoi.Items.Add("<18");
+            cboDoTuoi.Items.Add("Tuổi >18");
+            cboDoTuoi.Items.Add("Tuổi <18");
 
             cbo_TinhTrang.Items.Clear();
             cbo_TinhTrang.Items.Add("Đang Chiếu");

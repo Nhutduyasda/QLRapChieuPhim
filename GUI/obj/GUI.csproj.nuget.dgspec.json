@@ -171,6 +171,9 @@
             "projectReferences": {
               "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\DAL_Service.csproj": {
                 "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\DAL_Service.csproj"
+              },
+              "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj": {
+                "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj"
               }
             }
           }

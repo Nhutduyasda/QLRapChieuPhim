@@ -28,27 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             groupBox1 = new GroupBox();
+            pictureBox1 = new PictureBox();
             btnThoat = new Button();
             label3 = new Label();
             label2 = new Label();
             txtTaiKhoan = new TextBox();
             txtMatKhau = new TextBox();
-            chkHienThi = new CheckBox();
             btnDangNhap = new Button();
             label1 = new Label();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+            groupBox1.Controls.Add(pictureBox1);
             groupBox1.Controls.Add(btnThoat);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(txtTaiKhoan);
             groupBox1.Controls.Add(txtMatKhau);
-            groupBox1.Controls.Add(chkHienThi);
             groupBox1.Controls.Add(btnDangNhap);
             groupBox1.Controls.Add(label1);
             groupBox1.Cursor = Cursors.Cross;
@@ -58,6 +60,17 @@
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(455, 195);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(36, 27);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 21;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // btnThoat
             // 
@@ -104,20 +117,9 @@
             // 
             txtMatKhau.Location = new Point(181, 195);
             txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.PasswordChar = '●';
             txtMatKhau.Size = new Size(249, 27);
             txtMatKhau.TabIndex = 4;
-            // 
-            // chkHienThi
-            // 
-            chkHienThi.AutoSize = true;
-            chkHienThi.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            chkHienThi.Location = new Point(344, 256);
-            chkHienThi.Name = "chkHienThi";
-            chkHienThi.Size = new Size(86, 24);
-            chkHienThi.TabIndex = 3;
-            chkHienThi.Text = "Hiển thị";
-            chkHienThi.UseVisualStyleBackColor = true;
-            chkHienThi.CheckedChanged += chkHienThi_CheckedChanged_1;
             // 
             // btnDangNhap
             // 
@@ -154,6 +156,7 @@
             Text = "DangNhap";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -164,9 +167,9 @@
         private Label label2;
         private TextBox txtTaiKhoan;
         private TextBox txtMatKhau;
-        private CheckBox chkHienThi;
         private Button btnDangNhap;
         private Label label1;
         private Button btnThoat;
+        private PictureBox pictureBox1;
     }
 }
