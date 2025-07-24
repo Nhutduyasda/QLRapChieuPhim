@@ -31,7 +31,18 @@
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
+<<<<<<< HEAD
             "projectReferences": {}
+=======
+            "projectReferences": {
+              "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\DAL_Service.csproj": {
+                "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\DAL_Service.csproj"
+              },
+              "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj": {
+                "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj"
+              }
+            }
+>>>>>>> 41137d0 (nút hiện thị , form welcome , mật khẩu chỗ nhân viên)
           }
         },
         "warningProperties": {

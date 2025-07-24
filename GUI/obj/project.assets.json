@@ -5,7 +5,14 @@
   },
   "libraries": {},
   "projectFileDependencyGroups": {
+<<<<<<< HEAD
     "net8.0-windows7.0": []
+=======
+    "net8.0-windows7.0": [
+      "DAL_Service >= 1.0.0",
+      "DTO_Model >= 1.0.0"
+    ]
+>>>>>>> 41137d0 (nút hiện thị , form welcome , mật khẩu chỗ nhân viên)
   },
   "packageFolders": {
     "C:\\Users\\nhutduy\\.nuget\\packages\\": {},
@@ -38,7 +45,18 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+<<<<<<< HEAD
           "projectReferences": {}
+=======
+          "projectReferences": {
+            "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\DAL_Service.csproj": {
+              "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\DAL_Service.csproj"
+            },
+            "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj": {
+              "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj"
+            }
+          }
+>>>>>>> 41137d0 (nút hiện thị , form welcome , mật khẩu chỗ nhân viên)
         }
       },
       "warningProperties": {

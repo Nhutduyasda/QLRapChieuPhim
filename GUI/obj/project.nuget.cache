@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "6QHNvFABNpc=",
+=======
+  "dgSpecHash": "N/YM8GVIzIg=",
+>>>>>>> 41137d0 (nút hiện thị , form welcome , mật khẩu chỗ nhân viên)
   "success": true,
   "projectFilePath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
   "expectedPackageFiles": [],

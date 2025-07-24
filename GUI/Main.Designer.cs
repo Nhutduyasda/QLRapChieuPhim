@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             panel1 = new Panel();
             pnl_Main = new Panel();
             panel3 = new Panel();
@@ -142,9 +143,11 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(51, 25);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(124, 28);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(252, 140);
+            pictureBox1.Size = new Size(128, 136);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 

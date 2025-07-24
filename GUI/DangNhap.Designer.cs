@@ -28,26 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             groupBox1 = new GroupBox();
+<<<<<<< HEAD
             label3 = new Label();
             label2 = new Label();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             checkBox1 = new CheckBox();
             button2 = new Button();
+=======
+            pictureBox1 = new PictureBox();
+            btnThoat = new Button();
+            label3 = new Label();
+            label2 = new Label();
+            txtTaiKhoan = new TextBox();
+            txtMatKhau = new TextBox();
+            btnDangNhap = new Button();
+>>>>>>> 41137d0 (nút hiện thị , form welcome , mật khẩu chỗ nhân viên)
             label1 = new Label();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+<<<<<<< HEAD
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(checkBox1);
             groupBox1.Controls.Add(button2);
+=======
+            groupBox1.Controls.Add(pictureBox1);
+            groupBox1.Controls.Add(btnThoat);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(txtTaiKhoan);
+            groupBox1.Controls.Add(txtMatKhau);
+            groupBox1.Controls.Add(btnDangNhap);
+>>>>>>> 41137d0 (nút hiện thị , form welcome , mật khẩu chỗ nhân viên)
             groupBox1.Controls.Add(label1);
             groupBox1.Cursor = Cursors.Cross;
             groupBox1.Location = new Point(63, 40);
@@ -57,6 +79,32 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             // 
+<<<<<<< HEAD
+=======
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(455, 195);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(36, 27);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 21;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // btnThoat
+            // 
+            btnThoat.BackColor = Color.SeaGreen;
+            btnThoat.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnThoat.ForeColor = Color.White;
+            btnThoat.Location = new Point(303, 326);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(127, 42);
+            btnThoat.TabIndex = 9;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = false;
+            // 
+>>>>>>> 41137d0 (nút hiện thị , form welcome , mật khẩu chỗ nhân viên)
             // label3
             // 
             label3.AutoSize = true;
@@ -88,6 +136,7 @@
             // 
             // textBox1
             // 
+<<<<<<< HEAD
             textBox1.Location = new Point(181, 195);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(249, 27);
@@ -105,6 +154,15 @@
             checkBox1.UseVisualStyleBackColor = true;
             // 
             // button2
+=======
+            txtMatKhau.Location = new Point(181, 195);
+            txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.PasswordChar = '●';
+            txtMatKhau.Size = new Size(249, 27);
+            txtMatKhau.TabIndex = 4;
+            // 
+            // btnDangNhap
+>>>>>>> 41137d0 (nút hiện thị , form welcome , mật khẩu chỗ nhân viên)
             // 
             button2.BackColor = Color.SeaGreen;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -139,6 +197,7 @@
             Text = "DangNhap";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -147,10 +206,19 @@
         private GroupBox groupBox1;
         private Label label3;
         private Label label2;
+<<<<<<< HEAD
         private TextBox textBox2;
         private TextBox textBox1;
         private CheckBox checkBox1;
         private Button button2;
         private Label label1;
+=======
+        private TextBox txtTaiKhoan;
+        private TextBox txtMatKhau;
+        private Button btnDangNhap;
+        private Label label1;
+        private Button btnThoat;
+        private PictureBox pictureBox1;
+>>>>>>> 41137d0 (nút hiện thị , form welcome , mật khẩu chỗ nhân viên)
     }
 }
