@@ -73,7 +73,7 @@ namespace DAL_Service
 
         public override void Update(NhanVienDTO entity)
         {
-            string sql = "UPDATE NHAN_VIEN SET enNhanVien = @1, ChucVu = @2, SoDienThoai = @3, Email = @4, MatKhauHash = @5 WHERE MaNhanVien = @0";
+            string sql = "UPDATE NHAN_VIEN SET TenNhanVien = @1, ChucVu = @2, SoDienThoai = @3, Email = @4, MatKhauHash = @5 WHERE MaNhanVien = @0";
             List<object> parameters = new List<object>
             {
                 entity.MaNhanVien,

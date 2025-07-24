@@ -6,7 +6,7 @@ namespace UTIL_Valication
 {
     public class DBUTIL
     {
-        private static string connString = "Server =NGUYENNHUTDUY\\NHUTDUY; Database =PolyCafe; Integrated Security = true; TrustServerCertificate=True";
+        private static string connString = "Server =NGUYENNHUTDUY\\NHUTDUY; Database =QuanLiRapChieuPhim; Integrated Security = true; TrustServerCertificate=True";
         public static SqlCommand GetCommand(string sql, List<Object> args, CommandType cmdTyoe)
         {
             SqlConnection conn = new SqlConnection(connString);
