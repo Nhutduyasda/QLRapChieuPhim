@@ -83,6 +83,7 @@
             button7.TabIndex = 1;
             button7.Text = "Đăng Xuất";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button6
             // 
@@ -116,6 +117,7 @@
             btnThemSanPham.TabIndex = 4;
             btnThemSanPham.Text = "Thêm Sản Phẩm";
             btnThemSanPham.UseVisualStyleBackColor = true;
+            btnThemSanPham.Click += btnThemSanPham_Click;
             // 
             // btnMuaVe
             // 
@@ -139,6 +141,7 @@
             btnThemNhanVien.TabIndex = 2;
             btnThemNhanVien.Text = "Thêm Nhân Viên";
             btnThemNhanVien.UseVisualStyleBackColor = true;
+            btnThemNhanVien.Click += btnThemNhanVien_Click;
             // 
             // pictureBox1
             // 

@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class Main: Form
+    public partial class Main : Form
     {
         public Main()
         {
-            InitializeComponent();  
+            InitializeComponent();
             SetUpComponent();
-            
+
         }
         private void SetUpComponent()
         {
@@ -33,6 +33,22 @@ namespace GUI
             pnl_Main.Controls.Add(form);
             form.Show();
 
+        }
+
+        private void btnThemNhanVien_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new ThongTinNhanVien());
+
+        }
+
+        private void btnThemSanPham_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new ThemPhim());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new DangNhap());
         }
     }
 }
