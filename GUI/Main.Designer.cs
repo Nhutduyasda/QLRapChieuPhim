@@ -61,6 +61,7 @@
             // 
             // panel3
             // 
+            panel3.BackColor = Color.White;
             panel3.Controls.Add(button7);
             panel3.Controls.Add(button6);
             panel3.Controls.Add(btnBaoCaoDoanhThu);
@@ -149,7 +150,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(124, 28);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(128, 136);
+            pictureBox1.Size = new Size(144, 148);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;

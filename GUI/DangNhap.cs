@@ -19,6 +19,7 @@ namespace GUI
         public frmDangNhap()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -39,6 +40,15 @@ namespace GUI
             {
                 AuthUtil.user = nhanVien;
                 this.Dispose();
+            }
+        }
+
+        private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true;
             }
         }
 
