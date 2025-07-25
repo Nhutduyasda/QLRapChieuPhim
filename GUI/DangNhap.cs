@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using DAL_Service;
 using DTO_Model;
 using UTIL_Valication;
@@ -76,5 +77,16 @@ namespace GUI
         }
         
        
+=======
+
+namespace GUI
+{
+    public partial class DangNhap : Form
+    {
+        public DangNhap()
+        {
+            InitializeComponent();
+        }
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
     }
 }

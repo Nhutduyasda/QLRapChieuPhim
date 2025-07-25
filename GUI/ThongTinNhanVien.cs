@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 ﻿using DAL_Service;
 using DTO_Model;
 using System;
+=======
+﻿using System;
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,12 +13,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using UTIL_Valication;
+=======
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
 
 namespace GUI
 {
     public partial class ThongTinNhanVien : Form
     {
+<<<<<<< HEAD
         private NhanVienDAL nhanVienDAL;
         public ThongTinNhanVien()
         {
@@ -37,12 +45,18 @@ namespace GUI
             cboChucVu.Items.Add("Quản lý");
             cboChucVu.Items.Add("Nhân viên");
             cboChucVu.SelectedIndex = 0;
+=======
+        public ThongTinNhanVien()
+        {
+            InitializeComponent();
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
 
         }
+<<<<<<< HEAD
         private void LoadDSNhanVien()
         {
             nhanVienDAL = new NhanVienDAL();
@@ -221,5 +235,7 @@ namespace GUI
             isPasswordVisible = !isPasswordVisible;
             txtMatKhau.PasswordChar = isPasswordVisible ? '\0' : '●';
         }
+=======
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
     }
 }

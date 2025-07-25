@@ -1,6 +1,10 @@
 ﻿namespace GUI
 {
+<<<<<<< HEAD
     partial class frmDangNhap
+=======
+    partial class DangNhap
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +32,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             groupBox1 = new GroupBox();
             pictureBox1 = new PictureBox();
@@ -40,11 +45,23 @@
             label1 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+=======
+            groupBox1 = new GroupBox();
+            label3 = new Label();
+            label2 = new Label();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            checkBox1 = new CheckBox();
+            button2 = new Button();
+            label1 = new Label();
+            groupBox1.SuspendLayout();
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+<<<<<<< HEAD
             groupBox1.Controls.Add(pictureBox1);
             groupBox1.Controls.Add(btnThoat);
             groupBox1.Controls.Add(label3);
@@ -52,6 +69,14 @@
             groupBox1.Controls.Add(txtTaiKhoan);
             groupBox1.Controls.Add(txtMatKhau);
             groupBox1.Controls.Add(btnDangNhap);
+=======
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(checkBox1);
+            groupBox1.Controls.Add(button2);
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             groupBox1.Controls.Add(label1);
             groupBox1.Cursor = Cursors.Cross;
             groupBox1.Location = new Point(63, 40);
@@ -61,6 +86,7 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             // 
+<<<<<<< HEAD
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
@@ -84,6 +110,8 @@
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = false;
             // 
+=======
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             // label3
             // 
             label3.AutoSize = true;
@@ -106,6 +134,7 @@
             label2.TabIndex = 7;
             label2.Text = "Tài khoản";
             // 
+<<<<<<< HEAD
             // txtTaiKhoan
             // 
             txtTaiKhoan.Location = new Point(181, 128);
@@ -132,6 +161,44 @@
             btnDangNhap.TabIndex = 2;
             btnDangNhap.Text = "Đăng nhập";
             btnDangNhap.UseVisualStyleBackColor = false;
+=======
+            // textBox2
+            // 
+            textBox2.Location = new Point(181, 128);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(249, 27);
+            textBox2.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(181, 195);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(249, 27);
+            textBox1.TabIndex = 4;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            checkBox1.Location = new Point(344, 256);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(86, 24);
+            checkBox1.TabIndex = 3;
+            checkBox1.Text = "Hiển thị";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.SeaGreen;
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(200, 326);
+            button2.Name = "button2";
+            button2.Size = new Size(127, 42);
+            button2.TabIndex = 2;
+            button2.Text = "Đăng nhập";
+            button2.UseVisualStyleBackColor = false;
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             // 
             // label1
             // 
@@ -145,18 +212,29 @@
             label1.TabIndex = 0;
             label1.Text = "ĐĂNG NHẬP";
             // 
+<<<<<<< HEAD
             // frmDangNhap
+=======
+            // DangNhap
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaGreen;
             ClientSize = new Size(651, 550);
             Controls.Add(groupBox1);
+<<<<<<< HEAD
             Name = "frmDangNhap";
             Text = "DangNhap";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+=======
+            Name = "DangNhap";
+            Text = "DangNhap";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             ResumeLayout(false);
         }
 
@@ -165,11 +243,19 @@
         private GroupBox groupBox1;
         private Label label3;
         private Label label2;
+<<<<<<< HEAD
         private TextBox txtTaiKhoan;
         private TextBox txtMatKhau;
         private Button btnDangNhap;
         private Label label1;
         private Button btnThoat;
         private PictureBox pictureBox1;
+=======
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private CheckBox checkBox1;
+        private Button button2;
+        private Label label1;
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
     }
 }

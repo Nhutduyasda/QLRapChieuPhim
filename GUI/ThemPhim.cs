@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using DAL_Service;
 using DTO_Model;
+=======
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
 
 namespace GUI
 {
     public partial class ThemPhim : Form
     {
+<<<<<<< HEAD
         PhimDAL phim;
         public ThemPhim()
         {
@@ -182,6 +186,11 @@ namespace GUI
             ClearInputFields();
             LoadDSPhim();
 
+=======
+        public ThemPhim()
+        {
+            InitializeComponent();
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
         }
     }
 }

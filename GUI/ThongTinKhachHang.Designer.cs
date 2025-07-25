@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+<<<<<<< HEAD
             txtEmail = new TextBox();
             label4 = new Label();
             label3 = new Label();
@@ -39,12 +40,23 @@
             label1 = new Label();
             label5 = new Label();
             txtMaKhachHang = new TextBox();
+=======
+            textBox3 = new TextBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            button2 = new Button();
+            label1 = new Label();
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
+<<<<<<< HEAD
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(txtMaKhachHang);
             groupBox1.Controls.Add(txtEmail);
@@ -54,6 +66,15 @@
             groupBox1.Controls.Add(txtHoTen);
             groupBox1.Controls.Add(txtSoDienThoai);
             groupBox1.Controls.Add(btnLuu);
+=======
+            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(button2);
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             groupBox1.Controls.Add(label1);
             groupBox1.Cursor = Cursors.Cross;
             groupBox1.Location = new Point(63, 40);
@@ -63,19 +84,32 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             // 
+<<<<<<< HEAD
             // txtEmail
             // 
             txtEmail.Location = new Point(188, 316);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(249, 27);
             txtEmail.TabIndex = 10;
+=======
+            // textBox3
+            // 
+            textBox3.Location = new Point(188, 269);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(249, 27);
+            textBox3.TabIndex = 10;
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.BackColor = SystemColors.Control;
             label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+<<<<<<< HEAD
             label4.Location = new Point(48, 320);
+=======
+            label4.Location = new Point(48, 273);
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             label4.Name = "label4";
             label4.Size = new Size(54, 23);
             label4.TabIndex = 9;
@@ -86,7 +120,11 @@
             label3.AutoSize = true;
             label3.BackColor = SystemColors.Control;
             label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+<<<<<<< HEAD
             label3.Location = new Point(48, 246);
+=======
+            label3.Location = new Point(48, 199);
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             label3.Name = "label3";
             label3.Size = new Size(116, 23);
             label3.TabIndex = 8;
@@ -97,12 +135,17 @@
             label2.AutoSize = true;
             label2.BackColor = SystemColors.Control;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
+<<<<<<< HEAD
             label2.Location = new Point(48, 179);
+=======
+            label2.Location = new Point(48, 132);
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             label2.Name = "label2";
             label2.Size = new Size(134, 23);
             label2.TabIndex = 7;
             label2.Text = "Tên khách hàng";
             // 
+<<<<<<< HEAD
             // txtHoTen
             // 
             txtHoTen.Location = new Point(188, 175);
@@ -128,6 +171,33 @@
             btnLuu.TabIndex = 2;
             btnLuu.Text = "Lưu";
             btnLuu.UseVisualStyleBackColor = false;
+=======
+            // textBox2
+            // 
+            textBox2.Location = new Point(188, 128);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(249, 27);
+            textBox2.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(188, 195);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(249, 27);
+            textBox1.TabIndex = 4;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.SeaGreen;
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(188, 373);
+            button2.Name = "button2";
+            button2.Size = new Size(127, 42);
+            button2.TabIndex = 2;
+            button2.Text = "Lưu";
+            button2.UseVisualStyleBackColor = false;
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             // 
             // label1
             // 
@@ -141,6 +211,7 @@
             label1.TabIndex = 0;
             label1.Text = "THÔNG TIN KHÁCH HÀNG";
             // 
+<<<<<<< HEAD
             // label5
             // 
             label5.AutoSize = true;
@@ -160,6 +231,8 @@
             txtMaKhachHang.Size = new Size(249, 27);
             txtMaKhachHang.TabIndex = 11;
             // 
+=======
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
             // ThongTinKhachHang
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -180,6 +253,7 @@
         private GroupBox groupBox1;
         private Label label3;
         private Label label2;
+<<<<<<< HEAD
         private TextBox txtHoTen;
         private TextBox txtSoDienThoai;
         private Button btnLuu;
@@ -188,5 +262,13 @@
         private Label label4;
         private Label label5;
         private TextBox txtMaKhachHang;
+=======
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private Button button2;
+        private Label label1;
+        private TextBox textBox3;
+        private Label label4;
+>>>>>>> 4dbe4da3c264a95b1fbc116326ee64df3a6dc462
     }
 }
