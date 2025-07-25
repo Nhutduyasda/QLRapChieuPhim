@@ -1,12 +1,18 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "6QHNvFABNpc=",
-=======
-  "dgSpecHash": "N/YM8GVIzIg=",
->>>>>>> 41137d0 (nút hiện thị , form welcome , mật khẩu chỗ nhân viên)
+  "dgSpecHash": "b9CF5GMUNXw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
+  "projectFilePath": "C:\\Users\\kaybe\\OneDrive\\Máy tính\\DuAn1\\GUI\\GUI.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file C:\\Users\\kaybe\\OneDrive\\Máy tính\\DuAn1\\GUI\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\kaybe\\OneDrive\\Máy tính\\DuAn1\\GUI\\GUI.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\kaybe\\OneDrive\\Máy tính\\DuAn1\\GUI\\GUI.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

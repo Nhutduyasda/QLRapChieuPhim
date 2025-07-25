@@ -28,3 +28,21 @@ C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Se
 C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\refint\DAL_Service.dll
 C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\DAL_Service.pdb
 C:\Users\nhutduy\source\repos\QLRapChieuPhim\DAL.Service\obj\Debug\net8.0\ref\DAL_Service.dll
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\bin\Debug\net8.0\DAL_Service.deps.json
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\bin\Debug\net8.0\DAL_Service.dll
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\bin\Debug\net8.0\DAL_Service.pdb
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\bin\Debug\net8.0\DTO_Model.dll
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\bin\Debug\net8.0\UTIL_Valication.dll
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\bin\Debug\net8.0\DTO_Model.pdb
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\bin\Debug\net8.0\UTIL_Valication.pdb
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\obj\Debug\net8.0\DAL_Service.csproj.AssemblyReference.cache
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\obj\Debug\net8.0\DAL_Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\obj\Debug\net8.0\DAL_Service.AssemblyInfoInputs.cache
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\obj\Debug\net8.0\DAL_Service.AssemblyInfo.cs
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\obj\Debug\net8.0\DAL_Service.csproj.CoreCompileInputs.cache
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\obj\Debug\net8.0\DAL_Service.sourcelink.json
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\obj\Debug\net8.0\DAL_Serv.FBAE82EF.Up2Date
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\obj\Debug\net8.0\DAL_Service.dll
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\obj\Debug\net8.0\refint\DAL_Service.dll
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\obj\Debug\net8.0\DAL_Service.pdb
+C:\Users\kaybe\OneDrive\Máy tính\DuAn1\DAL.Service\obj\Debug\net8.0\ref\DAL_Service.dll

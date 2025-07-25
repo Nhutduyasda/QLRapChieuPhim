@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\GUI\\GUI.csproj": {}
+    "C:\\Users\\kaybe\\OneDrive\\Máy tính\\DuAn1\\GUI\\GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\GUI\\GUI.csproj": {
+    "C:\\Users\\kaybe\\OneDrive\\Máy tính\\DuAn1\\GUI\\GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
+        "projectUniqueName": "C:\\Users\\kaybe\\OneDrive\\Máy tính\\DuAn1\\GUI\\GUI.csproj",
         "projectName": "GUI",
-        "projectPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
-        "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\GUI\\obj\\",
+        "projectPath": "C:\\Users\\kaybe\\OneDrive\\Máy tính\\DuAn1\\GUI\\GUI.csproj",
+        "packagesPath": "C:\\Users\\kaybe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kaybe\\OneDrive\\Máy tính\\DuAn1\\GUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nhutduy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kaybe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -31,18 +31,7 @@
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
-<<<<<<< HEAD
             "projectReferences": {}
-=======
-            "projectReferences": {
-              "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\DAL_Service.csproj": {
-                "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DAL.Service\\DAL_Service.csproj"
-              },
-              "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj": {
-                "projectPath": "C:\\Users\\Dell inspiron\\Desktop\\DuAn1\\DTO_Model\\DTO_Model.csproj"
-              }
-            }
->>>>>>> 41137d0 (nút hiện thị , form welcome , mật khẩu chỗ nhân viên)
           }
         },
         "warningProperties": {
@@ -55,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -79,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
