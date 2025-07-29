@@ -53,9 +53,9 @@
             // 
             // pnl_Main
             // 
-            pnl_Main.Location = new Point(359, 2);
+            pnl_Main.Location = new Point(359, -8);
             pnl_Main.Name = "pnl_Main";
-            pnl_Main.Size = new Size(1183, 763);
+            pnl_Main.Size = new Size(1183, 773);
             pnl_Main.TabIndex = 1;
             // 
             // panel3
@@ -95,6 +95,7 @@
             button6.TabIndex = 1;
             button6.Text = "Khách Hàng";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // btnBaoCaoDoanhThu
             // 
@@ -104,8 +105,9 @@
             btnBaoCaoDoanhThu.Name = "btnBaoCaoDoanhThu";
             btnBaoCaoDoanhThu.Size = new Size(192, 47);
             btnBaoCaoDoanhThu.TabIndex = 5;
-            btnBaoCaoDoanhThu.Text = "Báo Cáo Doanh Thu";
+            btnBaoCaoDoanhThu.Text = "Thêm Suất Chiếu";
             btnBaoCaoDoanhThu.UseVisualStyleBackColor = true;
+            btnBaoCaoDoanhThu.Click += btnBaoCaoDoanhThu_Click;
             // 
             // btnThemSanPham
             // 

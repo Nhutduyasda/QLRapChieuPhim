@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {}
+    "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {
+    "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
+        "projectUniqueName": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
         "projectName": "DTO_Model",
-        "projectPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
+        "projectPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
         "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DTO_Model\\obj\\",
+        "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

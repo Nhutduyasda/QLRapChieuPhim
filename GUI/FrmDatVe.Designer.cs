@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblTieuDe = new Label();
             label11 = new Label();
             label10 = new Label();
             button50 = new Button();
@@ -41,16 +41,16 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // lblTieuDe
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.DarkGreen;
-            label1.Location = new Point(175, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(793, 50);
-            label1.TabIndex = 1;
-            label1.Text = "Màn hình chiếu - Doraemon - Đảo giấu vàng";
+            lblTieuDe.AutoSize = true;
+            lblTieuDe.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTieuDe.ForeColor = Color.DarkGreen;
+            lblTieuDe.Location = new Point(399, 9);
+            lblTieuDe.Name = "lblTieuDe";
+            lblTieuDe.Size = new Size(154, 50);
+            lblTieuDe.TabIndex = 1;
+            lblTieuDe.Text = "Tiêu Đề";
             // 
             // label11
             // 
@@ -158,7 +158,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1394, 777);
             Controls.Add(panel1);
-            Controls.Add(label1);
+            Controls.Add(lblTieuDe);
             Name = "FrmDatVe";
             Text = "FrmDatVe";
             Load += FrmDatVe_Load_1;
@@ -170,7 +170,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label lblTieuDe;
         private Label label11;
         private Label label10;
         private Button button50;

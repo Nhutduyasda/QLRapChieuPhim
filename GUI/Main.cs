@@ -16,7 +16,27 @@ namespace GUI
         {
             InitializeComponent();
             SetUpComponent();
+            SetUpColors();
 
+
+        }
+        private void SetUpColors()
+        {
+            this.BackColor = ColorTranslator.FromHtml("#ace3de");
+            this.button6.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.button7.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnBangDieuKhien.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnBaoCaoDoanhThu.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnMuaVe.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnThemNhanVien.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnThemSanPham.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.button6.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.button7.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnBangDieuKhien.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnBaoCaoDoanhThu.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnMuaVe.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnThemNhanVien.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnThemSanPham.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
         }
         private void SetUpComponent()
         {
@@ -25,11 +45,9 @@ namespace GUI
         private void ShowFormInPanel(Form form)
         {
             pnl_Main.Controls.Clear();
-
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
-
             pnl_Main.Controls.Add(form);
             form.Show();
 
@@ -58,7 +76,17 @@ namespace GUI
 
         private void btnMuaVe_Click(object sender, EventArgs e)
         {
-            ShowFormInPanel(new frmMuaVe());
+            ShowFormInPanel(new MuaVe());
+        }
+
+        private void btnBaoCaoDoanhThu_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new frmTaoSuatChieu());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new frmLSGD());
         }
     }
 }

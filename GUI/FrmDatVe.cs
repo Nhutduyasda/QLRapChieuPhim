@@ -4,21 +4,36 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL_Service;
+using DTO_Model;
 
 namespace GUI
 {
     public partial class FrmDatVe : Form
     {
-        public FrmDatVe()
+        private List<string> gheDaChon = new List<string>();
+        private string maSuatChieu;
+        private string tenPhim;
+
+
+
+        public FrmDatVe(string maSuatChieu, string tenPhim)
         {
             InitializeComponent();
+            this.maSuatChieu = maSuatChieu;
+            this.tenPhim = tenPhim;
+      
+            lblTieuDe.Text = $"Màn hình chiếu – {tenPhim}";
         }
+
         private List<Button> danhSachGheDaChon = new List<Button>();
         private void FrmDatVe_Load(object sender, EventArgs e)
         {
+            
             foreach (Control dieuKhien in this.Controls)
             {
                 if (dieuKhien is Button && dieuKhien.Name.StartsWith("btnGhe"))
@@ -26,7 +41,9 @@ namespace GUI
                     dieuKhien.Click += SuKienChonGhe;
                 }
             }
+
         }
+
         private void SuKienChonGhe(object sender, EventArgs e)
         {
             Button ghe = sender as Button;
@@ -38,7 +55,7 @@ namespace GUI
             }
             else
             {
-                ghe.BackColor = Color.LimeGreen;
+                ghe.BackColor = ColorTranslator.FromHtml("#4CAF50");
                 danhSachGheDaChon.Add(ghe);
             }
 
@@ -58,7 +75,7 @@ namespace GUI
             int giaVe = 75000;
             int tongTien = danhSachGheDaChon.Count * giaVe;
 
-            txtTongTienVe.Text = tongTien.ToString("N0") + " VNĐ"; // định dạng 75,000 VNĐ
+            txtTongTienVe.Text = tongTien.ToString("N0") + " VNĐ"; 
         }
 
         private void TaoGheTuDong()
@@ -71,7 +88,7 @@ namespace GUI
             int leTren = 100;
             int khoangCach = 10;
 
-            int chieuRongPanel = 920;  // phần bên trái
+            int chieuRongPanel = 920;
             int chieuCaoPanel = 600;
 
             int chieuRongGhe = (chieuRongPanel - (soCot - 1) * khoangCach) / soCot;
@@ -94,11 +111,15 @@ namespace GUI
                 ghe.Font = new Font("Segoe UI", 12, FontStyle.Bold);
                 ghe.BackColor = SystemColors.Control;
 
+                // ✅ Gán đúng MaGhe theo format đã lưu trong database: "btnGhe1", "btnGhe2", ...
+                ghe.Tag = "btnGhe" + (i + 1);
+
                 ghe.Click += SuKienChonGhe;
 
                 this.Controls.Add(ghe);
             }
         }
+
 
 
         private void label2_Click(object sender, EventArgs e)
@@ -131,29 +152,81 @@ namespace GUI
                 return;
             }
 
+            // Mở form nhập thông tin khách hàng
             ThongTinKhachHang formKH = new ThongTinKhachHang();
 
             if (formKH.ShowDialog() == DialogResult.OK)
             {
-                // Giả sử formKH có các thuộc tính public
+                // 1. Lấy thông tin khách hàng từ form
+                string maKH = formKH.MaKhachHang;
                 string tenKH = formKH.HoTen;
-                
                 string sdt = formKH.SoDienThoai;
                 string email = formKH.Email;
                 string gheDaChon = txtGheDaChon.Text;
                 string tongTien = txtTongTienVe.Text;
 
+                // 2. Tạo mã đặt vé & đối tượng DatVe
+                string maDatVe = "DV" + Guid.NewGuid().ToString("N").Substring(0, 8);
+
+                DatVeDTO datVe = new DatVeDTO
+                {
+                    MaDatVe = maDatVe,
+                    MaKhachHang = maKH,
+                    MaNhanVien = "NV001",
+                    ThoiGianDatVe = DateTime.Now,
+                    TongTien = decimal.Parse(tongTien.Replace(" VNĐ", "").Replace(",", "")),
+                    TrangThaiThanhToan = "Chờ xử lý"
+                };
+
+                DatVeDAL datVeDAL = new DatVeDAL();
+                datVeDAL.Insert(datVe);
+
+                VeDAL veDAL = new VeDAL();
+                GheDAL gheDAL = new GheDAL();
+
+                foreach (Button btn in danhSachGheDaChon)
+                {
+                    // MaGhe được lưu trong Tag của button
+                    string maGhe = btn.Tag.ToString();
+
+                    VeDTO ve = new VeDTO
+                    {
+                        MaVe = "VE" + Guid.NewGuid().ToString("N").Substring(0, 6),
+                        MaDatVe = maDatVe,
+                        MaSuatChieu = this.maSuatChieu, 
+                        MaGhe = maGhe,
+                        GiaVe = 75000,
+                        LoaiVe = "Người lớn"
+                    };
+
+                    veDAL.Insert(ve);
+
+
+                    GheDTO ghe = new GheDTO
+                    {
+                        MaGhe = maGhe,
+                        TrangThai = "Đã đặt"
+                    };
+                    gheDAL.UpdateTrangThai(ghe);
+                }
+
+                // 4. Xuất hóa đơn
                 XuatHoaDon(tenKH, sdt, email, gheDaChon, tongTien);
 
-                // Ẩn các ghế đã mua
+                // 5. Reset
                 foreach (Button ghe in danhSachGheDaChon)
                 {
                     ghe.Visible = false;
                 }
+
                 danhSachGheDaChon.Clear();
                 txtGheDaChon.Clear();
                 txtTongTienVe.Clear();
+
+                MessageBox.Show("Đặt vé thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+
         }
         private void XuatHoaDon(string hoTen, string sdt, string email, string ghe, string tongTien)
         {

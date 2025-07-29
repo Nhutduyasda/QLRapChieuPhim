@@ -22,6 +22,7 @@ namespace GUI
             this.StartPosition = FormStartPosition.CenterScreen;
             khachHangDAL = new KhachHangDAL();
         }
+        public string MaKhachHang => txtMaKhachHang.Text;
         public string HoTen => txtHoTen.Text;
         public string SoDienThoai => txtSoDienThoai.Text;
         public string Email => txtEmail.Text;
@@ -50,7 +51,7 @@ namespace GUI
             {
                 KhachHang khachHang = new KhachHang
                 {
-                    MaKhachHang = khachHangDAL.generateAutoMaKhachHang("KHACH_HANG", "MaKhachHang", "KH"),
+                    MaKhachHang = txtMaKhachHang.Text,
                     TenKhachHang = txtHoTen.Text,
                     Email = txtEmail.Text,
                     SoDienThoai = txtSoDienThoai.Text

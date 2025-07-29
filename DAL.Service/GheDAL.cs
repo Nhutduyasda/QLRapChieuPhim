@@ -14,11 +14,17 @@ namespace DAL_Service
             string sql = "SELECT * FROM GHE";
             return selectBySql(sql, new List<object>());
         }
+        public void UpdateTrangThai(GheDTO ghe)
+        {
+            string sql = "UPDATE GHE SET TrangThai = @0 WHERE MaGhe = @1";
+            List<object> args = new List<object> { ghe.TrangThai, ghe.MaGhe };
+            DBUTIL.Update(sql, args);
+        }
 
         public override GheDTO selectById(string id)
         {
             string sql = "SELECT * FROM GHE WHERE MaGhe = @0";
-            var args = new List<object> { id };
+            List<object> args = new List<object> { id };
             var result = selectBySql(sql, args);
             return result.Count > 0 ? result[0] : null;
         }
@@ -35,7 +41,7 @@ namespace DAL_Service
                     MaPhongChieu = reader["MaPhongChieu"].ToString(),
                     SoGhe = reader["SoGhe"].ToString(),
                     HangGhe = reader["HangGhe"].ToString(),
-                    LoaiGhe = reader["LoaiGhe"].ToString()
+                    TrangThai = reader["TrangThai"].ToString()
                 };
                 list.Add(ghe);
             }
@@ -43,33 +49,22 @@ namespace DAL_Service
             return list;
         }
 
-        public override void Insert(GheDTO ghe)
+        public override void Insert(GheDTO entity)
         {
-            string sql = @"INSERT INTO GHE (MaGhe, MaPhongChieu, SoGhe, HangGhe, LoaiGhe)
-                           VALUES (@0, @1, @2, @3, @4)";
-            var args = new List<object>
+            string sql = "INSERT INTO GHE (MaGhe, MaPhongChieu, SoGhe, HangGhe, TrangThai) VALUES (@0, @1, @2, @3, @4)";
+            List<object> args = new List<object>
             {
-                ghe.MaGhe,
-                ghe.MaPhongChieu,
-                ghe.SoGhe,
-                ghe.HangGhe,
-                ghe.LoaiGhe
+                entity.MaGhe, entity.MaPhongChieu, entity.SoGhe, entity.HangGhe, entity.TrangThai
             };
             DBUTIL.Update(sql, args);
         }
 
-        public override void Update(GheDTO ghe)
+        public override void Update(GheDTO entity)
         {
-            string sql = @"UPDATE GHE 
-                           SET MaPhongChieu = @1, SoGhe = @2, HangGhe = @3, LoaiGhe = @4 
-                           WHERE MaGhe = @0";
-            var args = new List<object>
+            string sql = "UPDATE GHE SET MaPhongChieu = @1, SoGhe = @2, HangGhe = @3, TrangThai = @4 WHERE MaGhe = @0";
+            List<object> args = new List<object>
             {
-                ghe.MaGhe,
-                ghe.MaPhongChieu,
-                ghe.SoGhe,
-                ghe.HangGhe,
-                ghe.LoaiGhe
+                entity.MaGhe, entity.MaPhongChieu, entity.SoGhe, entity.HangGhe, entity.TrangThai
             };
             DBUTIL.Update(sql, args);
         }

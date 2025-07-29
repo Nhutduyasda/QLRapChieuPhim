@@ -12,6 +12,6 @@ namespace DTO_Model
         public string? MaPhongChieu { get; set; }
         public string? SoGhe { get; set; }
         public string? HangGhe { get; set; }
-        public string? LoaiGhe { get; set; } // Loại ghế: Thường, VIP, Đặc Biệt
+        public string? TrangThai { get; set; }
     }
 }

@@ -22,8 +22,35 @@ namespace GUI
             SetUpDataGirdView();
             LoadComboBoxChucVu();
             LoadDSNhanVien();
+            SetUpColors();
 
         }
+        public void SetUpColors()
+        {
+            this.BackColor = ColorTranslator.FromHtml("#ace3de");
+            this.btnThem.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnThem.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnXoa.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnXoa.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnCapNhat.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnCapNhat.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnLamMoi.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnLamMoi.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.txtHoTen.BackColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.txtHoTen.ForeColor = ColorTranslator.FromHtml("#000000");
+            this.txtSoDienThoai.BackColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.txtSoDienThoai.ForeColor = ColorTranslator.FromHtml("#000000");
+            this.txtEmail.BackColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.txtEmail.ForeColor = ColorTranslator.FromHtml("#000000");
+            this.txtMatKhau.BackColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.txtMatKhau.ForeColor = ColorTranslator.FromHtml("#000000");
+            this.txtMaNhanVien.BorderStyle = BorderStyle.FixedSingle;
+            this.txtHoTen.BorderStyle = BorderStyle.FixedSingle;
+            this.txtSoDienThoai.BorderStyle = BorderStyle.FixedSingle;
+            this.txtEmail.BorderStyle = BorderStyle.FixedSingle;
+            this.txtMatKhau.BorderStyle = BorderStyle.FixedSingle;
+        }
+        public string MaNhanVien => txtMaNhanVien.Text;
         public void SetUpDataGirdView()
         {
             dgvDanhSachNV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

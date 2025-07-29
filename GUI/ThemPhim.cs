@@ -22,6 +22,39 @@ namespace GUI
             SetUpDataGirdView();
             LoadCombox();
             LoadDSPhim();
+            SetUpColors();
+        }
+        public void SetUpColors()
+        {
+            this.BackColor = ColorTranslator.FromHtml("#ace3de");
+            this.dgvDanhSachPhim.BackgroundColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.dgvDanhSachPhim.DefaultCellStyle.SelectionForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.dgvDanhSachPhim.DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#000000");
+            this.dgvDanhSachPhim.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FFFFFF");
+            //Button colors
+            this.btnThemPhim.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnThemPhim.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnCapNhat.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnCapNhat.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnXoa.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnXoa.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnLamMoi.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnLamMoi.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.txtTenPhim.BackColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.txtTenPhim.ForeColor = ColorTranslator.FromHtml("#000000");
+            this.txtTheLoai.BackColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.txtTheLoai.ForeColor = ColorTranslator.FromHtml("#000000");
+            this.txtThoiLuong.BackColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.txtThoiLuong.ForeColor = ColorTranslator.FromHtml("#000000");
+            this.cboDoTuoi.BackColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.cboDoTuoi.ForeColor = ColorTranslator.FromHtml("#000000");
+            this.cbo_TinhTrang.BackColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.cbo_TinhTrang.ForeColor = ColorTranslator.FromHtml("#000000");
+            this.txtTenPhim.BorderStyle = BorderStyle.FixedSingle;
+            this.txtTheLoai.BorderStyle = BorderStyle.FixedSingle;
+            this.txtThoiLuong.BorderStyle = BorderStyle.FixedSingle;
+            this.pictureBox_anhPhim.BorderStyle = BorderStyle.FixedSingle;
+
         }
         public void SetUpDataGirdView()
         {
@@ -33,7 +66,7 @@ namespace GUI
         {
             cboDoTuoi.Items.Clear();
             cboDoTuoi.Items.Add(">18");
-            cboDoTuoi.Items.Add("<18");
+            cboDoTuoi.Items.Add("tất cả đều xem được");
 
             cbo_TinhTrang.Items.Clear();
             cbo_TinhTrang.Items.Add("Đang Chiếu");

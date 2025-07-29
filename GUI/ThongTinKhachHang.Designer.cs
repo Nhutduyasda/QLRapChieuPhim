@@ -78,7 +78,6 @@
             // 
             txtMaKhachHang.Location = new Point(188, 114);
             txtMaKhachHang.Name = "txtMaKhachHang";
-            txtMaKhachHang.ReadOnly = true;
             txtMaKhachHang.Size = new Size(249, 27);
             txtMaKhachHang.TabIndex = 11;
             // 
