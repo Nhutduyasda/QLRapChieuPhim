@@ -89,6 +89,7 @@
             dgvLichSuGiaoDich.RowHeadersWidth = 51;
             dgvLichSuGiaoDich.Size = new Size(763, 565);
             dgvLichSuGiaoDich.TabIndex = 31;
+            dgvLichSuGiaoDich.CellClick += dgvLichSuGiaoDich_CellClick;
             dgvLichSuGiaoDich.CellContentClick += dgvDanhSachKH_CellContentClick;
             // 
             // label5

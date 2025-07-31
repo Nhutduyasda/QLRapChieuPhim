@@ -99,20 +99,62 @@ namespace DAL_Service
             List<object> parameters = new List<object> { id };
             DBUTIL.Update(sql, parameters);
         }
-
+        public List<ThayDoiTrangThaiPhimView> SelectViewThayDoiTrangThaiPhim()
+        {
+            List<ThayDoiTrangThaiPhimView> list = new List<ThayDoiTrangThaiPhimView>();
+            string sql = @"
+            SELECT
+                SC.MaSuatChieu,
+                SC.NgayChieu,
+                SC.ThoiGianKetThuc,
+                P.TinhTrang
+            FROM SUAT_CHIEU SC
+            JOIN PHIM P ON SC.MaPhim = P.MaPhim
+            ";
+            try
+            {
+                SqlDataReader reader = DBUTIL.Query(sql, new List<object>());
+                while (reader.Read())
+                {
+                    ThayDoiTrangThaiPhimView item = new ThayDoiTrangThaiPhimView
+                    {
+                        MaSuatChieu = reader["MaSuatChieu"].ToString(),
+                        NgayChieu = reader["NgayChieu"].ToString(),
+                        ThoiGianKetThuc = reader["ThoiGianKetThuc"].ToString(),
+                        TinhTrang = reader["TinhTrang"].ToString()
+                    };
+                    list.Add(item);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error selecting ThayDoiTrangThaiPhimView", ex);
+            }
+            return list;
+        }
+        // Update trạng thái phim
+        public void UpdateTinhTrang(string maSuatChieu, string tinhTrang)
+        {
+            string sql = "UPDATE PHIM SET TinhTrang = @0 WHERE MaPhim = (SELECT MaPhim FROM SUAT_CHIEU WHERE MaSuatChieu = @1)";
+            List<object> parameters = new List<object> { tinhTrang, maSuatChieu };
+            DBUTIL.Update(sql, parameters);
+        }
         public List<SuatChieuView> SelectViewPhimSuatChieu()
         {
             List<SuatChieuView> list = new List<SuatChieuView>();
             string sql = @"
-        SELECT 
-            SC.MaSuatChieu,
-            P.TenPhim,
-            PC.TenPhongChieu,
-            P.HinhAnh,
-            SC.GiaVe
-        FROM SUAT_CHIEU SC
-        JOIN PHIM P ON SC.MaPhim = P.MaPhim
-        JOIN PHONG_CHIEU PC ON SC.MaPhongChieu = PC.MaPhongChieu
+            SELECT 
+                SC.MaSuatChieu,
+                P.TenPhim,
+                PC.TenPhongChieu,
+                P.HinhAnh,
+                SC.GiaVe,
+                P.TinhTrang
+            FROM SUAT_CHIEU SC
+            JOIN PHIM P ON SC.MaPhim = P.MaPhim
+            JOIN PHONG_CHIEU PC ON SC.MaPhongChieu = PC.MaPhongChieu
+
     ";
 
             try
@@ -126,6 +168,7 @@ namespace DAL_Service
                         TenPhim = reader["TenPhim"].ToString(),
                         TenPhongChieu = reader["TenPhongChieu"].ToString(),
                         HinhAnh = reader["HinhAnh"].ToString(),
+                        TinhTrang = reader["TinhTrang"].ToString(),
                         GiaVe = Convert.ToDecimal(reader["GiaVe"])
                     };
                     list.Add(item);

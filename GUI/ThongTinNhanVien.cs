@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL_Service;
 using DTO_Model;
+using UTIL_Valication;
 
 namespace GUI
 {
@@ -50,7 +51,6 @@ namespace GUI
             this.txtEmail.BorderStyle = BorderStyle.FixedSingle;
             this.txtMatKhau.BorderStyle = BorderStyle.FixedSingle;
         }
-        public string MaNhanVien => txtMaNhanVien.Text;
         public void SetUpDataGirdView()
         {
             dgvDanhSachNV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -79,7 +79,7 @@ namespace GUI
             if (list.Count > 0 && list != null)
             {
                 dgvDanhSachNV.DataSource = list;
-                dgvDanhSachNV.Columns["MatKhau"].Visible = false;
+                dgvDanhSachNV.Columns["MatKhauHash"].Visible = false;
             }
 
         }
@@ -111,7 +111,14 @@ namespace GUI
                 txtHoTen.Text = row.Cells["TenNhanVien"].Value.ToString();
                 txtSoDienThoai.Text = row.Cells["SoDienThoai"].Value.ToString();
                 txtEmail.Text = row.Cells["Email"].Value.ToString();
-                cboChucVu.Text = row.Cells["ChucVu"].Value.ToString();
+                txtMatKhau.Text = row.Cells["MatKhauHash"].Value.ToString();
+                var chucVuValue = row.Cells["ChucVu"].Value?.ToString();
+                if (chucVuValue == "True")
+                    cboChucVu.Text = "Quản lý";
+                else if (chucVuValue == "False")
+                    cboChucVu.Text = "Nhân viên";
+                else
+                    cboChucVu.Text = chucVuValue;
 
             }
 
@@ -119,27 +126,70 @@ namespace GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+
             try
             {
+                string soDienThoai = txtSoDienThoai.Text;
+                string email = txtEmail.Text;
+                string matKhau = txtMatKhau.Text;
+                // bắt lỗi chi tiết từng input
+                if (Valication.IsEmpty(txtHoTen.Text))
+                {
+                    MessageBox.Show("Vui lòng điền họ tên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (Valication.IsEmpty(soDienThoai))
+                {
+                    MessageBox.Show("Vui lòng điền số điện thoại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (Valication.IsEmpty(email))
+                {
+                    MessageBox.Show("Vui lòng điền email.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (Valication.IsEmpty(matKhau))
+                {
+                    MessageBox.Show("Vui lòng điền mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!Valication.IsValidPhoneNumber(soDienThoai))
+                {
+                    MessageBox.Show("Số điện thoại không hợp lệ. Vui lòng nhập lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (!Valication.IsValidGmail(email))
+                {
+                    MessageBox.Show("Email không hợp lệ. Vui lòng nhập lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (!Valication.IsValidPassword(matKhau))
+                {
+                    MessageBox.Show("Mật khẩu phải ít nhất 6 ký tự, bao gồm ít nhất 1 chữ cái và 1 chữ số.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                // Chuyển đổi ChucVu sang kiểu bool
+                bool isManager = cboChucVu.Text == "Quản lý";
                 NhanVienDTO nhanVien = new NhanVienDTO
                 {
                     MaNhanVien = nhanVienDAL.generateAutoMaNhanVien("NHAN_VIEN", "MaNhanVien", "NV"),
                     TenNhanVien = txtHoTen.Text,
                     SoDienThoai = txtSoDienThoai.Text,
                     Email = txtEmail.Text,
-                    ChucVu = cboChucVu.Text,
-                    MatKhau = txtMatKhau.Text
+                    ChucVu = cboChucVu.Text == "Quản lý" ? true : false,
+                    MatKhauHash = txtMatKhau.Text
                 };
                 nhanVienDAL.Insert(nhanVien);
                 LoadDSNhanVien();
                 ClearInputFields();
                 MessageBox.Show("Thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi thêm nhân viên: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -170,6 +220,39 @@ namespace GUI
         {
             try
             {
+                string soDienThoai = txtSoDienThoai.Text;
+                string email = txtEmail.Text;
+                string matKhau = txtMatKhau.Text;
+                if (Valication.IsEmpty(txtHoTen.Text))
+                {
+                    MessageBox.Show("Vui lòng điền họ tên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (Valication.IsEmpty(soDienThoai))
+                {
+                    MessageBox.Show("Vui lòng điền số điện thoại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (Valication.IsEmpty(email))
+                {
+                    MessageBox.Show("Vui lòng điền email.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (Valication.IsEmpty(matKhau))
+                {
+                    MessageBox.Show("Vui lòng điền mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (!Valication.IsValidPhoneNumber(soDienThoai))
+                {
+                    MessageBox.Show("Số điện thoại không hợp lệ. Vui lòng nhập lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (!Valication.IsValidGmail(email))
+                {
+                    MessageBox.Show("Email không hợp lệ. Vui lòng nhập lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 if (dgvDanhSachNV.SelectedRows.Count > 0)
                 {
                     string maNhanVien = dgvDanhSachNV.SelectedRows[0].Cells["MaNhanVien"].Value.ToString();
@@ -179,8 +262,8 @@ namespace GUI
                         TenNhanVien = txtHoTen.Text,
                         SoDienThoai = txtSoDienThoai.Text,
                         Email = txtEmail.Text,
-                        ChucVu = cboChucVu.Text,
-                        MatKhau = txtMatKhau.Text
+                        ChucVu = cboChucVu.Text == "Quản lý" ? true : false,
+                        MatKhauHash = txtMatKhau.Text
                     };
                     nhanVienDAL.Update(nhanVien);
                     ClearInputFields();
@@ -216,6 +299,19 @@ namespace GUI
             LoadDSNhanVien();
             MessageBox.Show("Đã làm mới danh sách nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void dgvDanhSachNV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvDanhSachNV.Columns[e.ColumnIndex].Name == "ChucVu" && e.Value != null)
+            {
+                bool isManager = false;
+                if (bool.TryParse(e.Value.ToString(), out isManager))
+                {
+                    e.Value = isManager ? "Quản Lý" : "Nhân viên";
+                    e.FormattingApplied = true;
+                }
+            }
         }
     }
 }

@@ -86,6 +86,23 @@ namespace DAL_Service
             List<object> parameters = new List<object> { id };
             DBUTIL.Update(sql, parameters);
         }
+        
+        public string GetLastInsertedMaKhachHang()
+        {
+            string sql = "SELECT TOP 1 MaKhachHang FROM KHACH_HANG ORDER BY MaKhachHang DESC";
+            List<object> parameters = new List<object>();
+            object result = DBUTIL.Value(sql, parameters);
+            return result != null ? result.ToString() : null;
+
+        }
+        public bool Exists(string maKH)
+        {
+            string sql = "SELECT COUNT(*) FROM KHACH_HANG WHERE MaKhachHang = @0";
+            List<object> parameters = new List<object> { maKH };
+            object result = DBUTIL.Value(sql, parameters);
+            return result != null && Convert.ToInt32(result) > 0;
+
+        }
 
     }
 }

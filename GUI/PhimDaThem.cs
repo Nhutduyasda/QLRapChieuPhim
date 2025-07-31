@@ -40,10 +40,6 @@ namespace GUI
             dgvDSPhim.Columns["TinhTrang"].HeaderText = "Tình Trạng";
             dgvDSPhim.Columns["ThoiLuong"].HeaderText = "Thời Lượng (phút)";
             dgvDSPhim.Columns["HinhAnh"].HeaderText = "Hình Ảnh";
-
-
-
-
         }
         private void LoadDanhSachPhim()
         {
@@ -51,16 +47,51 @@ namespace GUI
             phimDAL = new PhimDAL();
             List<DTO_Model.PhimDTO> list = phimDAL.selectAll();
             dgvDSPhim.DataSource = list;
-            DemSoPhimDangChieu(); 
+            DemSoPhimDangChieu();
+            ShowDateTime();
+            DemSoNhanVien();
+        }
+        private void DemSoNhanVien()
+        {
+
+            NhanVienDAL nhanVienDAL = new NhanVienDAL();
+            int count = nhanVienDAL.selectAll().Count;
+            lblEmp.Text = count.ToString();
+            // Đặt định dạng cho nhãn
+            lblEmp.Font = new Font("Arial", 12, FontStyle.Bold);
+            lblEmp.ForeColor = Color.Black;
+            lblNV.Font = new Font("Arial", 12, FontStyle.Bold);
+            lblNV.ForeColor = Color.Black;
+
+        }
+        private void ShowDateTime()
+        {
+            // Hiển thị ngày giờ hiện tại
+
+            lblDateTime.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            // Đặt định dạng cho nhãn
+            lblDateTime.Font = new Font("Arial", 12, FontStyle.Bold);
+            lblDateTime.ForeColor = Color.Black;
+            lblNgay.Font = new Font("Arial", 12, FontStyle.Bold);
+            lblNgay.ForeColor = Color.Black;
+;
+
         }
 
         private void DemSoPhimDangChieu()
         {
+
             int count = dgvDSPhim.Rows
                 .Cast<DataGridViewRow>()
-                .Count(row => row.Cells["TinhTrang"].Value?.ToString() == "Đang Chiếu");
+                .Count(row => row.Cells["TinhTrang"].Value?.ToString() == "Đang chiếu");
 
             lblNumber.Text = count.ToString();
+            // Đặt định dạng cho nhãn
+            lblNumber.Font = new Font("Arial", 12, FontStyle.Bold);
+            lblNumber.ForeColor = Color.Black;
+            lblName.Font = new Font("Arial", 12, FontStyle.Bold);
+            lblName.ForeColor = Color.Black;
+
         }
 
         private void SetUpColors()

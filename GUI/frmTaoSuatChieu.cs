@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL_Service;
 using DTO_Model;
+using UTIL_Valication;
 
 namespace GUI
 {
@@ -98,6 +99,50 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Kiểm tra ngày chiếu không ở quá khứ
+            if (!Valication.IsValidFutureDate(dateTimePicker_NgayChieu.Value.Date))
+            {
+                MessageBox.Show("Ngày chiếu không được ở quá khứ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra giờ bắt đầu < giờ kết thúc
+            TimeSpan gioBatDau, gioKetThuc;
+            if (!TimeSpan.TryParse(txtBatDau.Text, out gioBatDau) || !TimeSpan.TryParse(txtKetThuc.Text, out gioKetThuc))
+            {
+                MessageBox.Show("Định dạng giờ không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!Valication.IsStartTimeBeforeEndTime(gioBatDau, gioKetThuc))
+            {
+                MessageBox.Show("Giờ bắt đầu phải nhỏ hơn giờ kết thúc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra suất chiếu có chưa
+            if (!Valication.IsRoomAvailableForTime(
+                cboPhongChieu.SelectedValue.ToString(),
+                dateTimePicker_NgayChieu.Value.Date,
+                gioBatDau,
+                gioKetThuc,
+                suatChieu.selectAll()))
+            {
+                MessageBox.Show("Phòng chiếu đã có suất chiếu trong khoảng thời gian này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtBatDau.Text) ||
+                string.IsNullOrWhiteSpace(txtKetThuc.Text))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if(string.IsNullOrWhiteSpace(txtGiaVe.Text) || !decimal.TryParse(txtGiaVe.Text, out decimal giaVe) || giaVe <= 0)
+            {
+                MessageBox.Show("Giá vé phải là số dương!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 if (dgvSuatChieuPhim.SelectedRows.Count > 0)
@@ -131,6 +176,39 @@ namespace GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+
+
+            // Kiểm tra ngày chiếu không ở quá khứ
+            if (!Valication.IsValidFutureDate(dateTimePicker_NgayChieu.Value.Date))
+            {
+                MessageBox.Show("Ngày chiếu không được ở quá khứ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra giờ bắt đầu < giờ kết thúc
+            TimeSpan gioBatDau, gioKetThuc;
+            if (!TimeSpan.TryParse(txtBatDau.Text, out gioBatDau) || !TimeSpan.TryParse(txtKetThuc.Text, out gioKetThuc))
+            {
+                MessageBox.Show("Định dạng giờ không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!Valication.IsStartTimeBeforeEndTime(gioBatDau, gioKetThuc))
+            {
+                MessageBox.Show("Giờ bắt đầu phải nhỏ hơn giờ kết thúc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra suất chiếu có chưa
+            if (!Valication.IsRoomAvailableForTime(
+                cboPhongChieu.SelectedValue.ToString(),
+                dateTimePicker_NgayChieu.Value.Date,
+                gioBatDau,
+                gioKetThuc,
+                suatChieu.selectAll()))
+            {
+                MessageBox.Show("Phòng chiếu đã có suất chiếu trong khoảng thời gian này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                 SuatChieuDTO suatChieuDTO = new SuatChieuDTO

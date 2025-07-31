@@ -66,6 +66,7 @@
             btnThoat.TabIndex = 17;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = false;
+            btnThoat.Click += btnThoat_Click;
             // 
             // label3
             // 
@@ -100,6 +101,7 @@
             // 
             txtMatKhau.Location = new Point(204, 235);
             txtMatKhau.Name = "txtMatKhau";
+            txtMatKhau.PasswordChar = '●';
             txtMatKhau.Size = new Size(249, 27);
             txtMatKhau.TabIndex = 13;
             // 
@@ -113,6 +115,7 @@
             chkHienThi.TabIndex = 12;
             chkHienThi.Text = "Hiển thị";
             chkHienThi.UseVisualStyleBackColor = true;
+            chkHienThi.CheckedChanged += chkHienThi_CheckedChanged;
             // 
             // btnDangNhap
             // 
@@ -125,6 +128,7 @@
             btnDangNhap.TabIndex = 11;
             btnDangNhap.Text = "Đăng nhập";
             btnDangNhap.UseVisualStyleBackColor = false;
+            btnDangNhap.Click += btnDangNhap_Click_1;
             // 
             // label1
             // 
@@ -147,6 +151,7 @@
             Controls.Add(panel1);
             Name = "frmDangNhap";
             Text = "DangNhap";
+            FormClosing += frmDangNhap_FormClosing_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

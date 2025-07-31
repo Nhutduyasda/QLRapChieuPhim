@@ -65,12 +65,14 @@ namespace GUI
         public void LoadCombox()
         {
             cboDoTuoi.Items.Clear();
-            cboDoTuoi.Items.Add(">18");
-            cboDoTuoi.Items.Add("tất cả đều xem được");
+            cboDoTuoi.Items.Add("13+");
+            cboDoTuoi.Items.Add("16");
+            cboDoTuoi.Items.Add("18+");
+            
 
             cbo_TinhTrang.Items.Clear();
             cbo_TinhTrang.Items.Add("Đang Chiếu");
-            cbo_TinhTrang.Items.Add("Ngưng Chiếu");
+            cbo_TinhTrang.Items.Add("Ngừng Chiếu");
 
         }
         public void LoadDSPhim()
@@ -95,6 +97,39 @@ namespace GUI
         {
             try
             {
+                // bắt lỗi chi tiết từng input
+                if (string.IsNullOrWhiteSpace(txtTenPhim.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập tên phim.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(txtTheLoai.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập thể loại phim.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(txtThoiLuong.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập thời lượng phim.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (cbo_TinhTrang.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn tình trạng phim.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (cboDoTuoi.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Vui lòng chọn độ tuổi phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(pictureBox_anhPhim.ImageLocation))
+                {
+                    MessageBox.Show("Vui lòng chọn hình ảnh cho phim.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
                 PhimDTO phimDTO = new PhimDTO
                 {
                     MaPhim = phim.generateAutoMaPhim("PHIM", "MaPhim", "PHIM"),

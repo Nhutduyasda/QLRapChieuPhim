@@ -18,15 +18,14 @@ namespace GUI
         private List<string> gheDaChon = new List<string>();
         private string maSuatChieu;
         private string tenPhim;
-
-
-
+        private KhachHangDAL khachHangDAL;
         public FrmDatVe(string maSuatChieu, string tenPhim)
         {
             InitializeComponent();
             this.maSuatChieu = maSuatChieu;
             this.tenPhim = tenPhim;
-      
+            khachHangDAL = new KhachHangDAL();
+
             lblTieuDe.Text = $"Màn hình chiếu – {tenPhim}";
         }
 
@@ -154,10 +153,20 @@ namespace GUI
 
             // Mở form nhập thông tin khách hàng
             ThongTinKhachHang formKH = new ThongTinKhachHang();
+            ThongTinNhanVien formNV = new ThongTinNhanVien();
 
             if (formKH.ShowDialog() == DialogResult.OK)
             {
                 // 1. Lấy thông tin khách hàng từ form
+                // Kiểm tra thông tin khách hàng
+                if (string.IsNullOrWhiteSpace(formKH.MaKhachHang) ||
+                    string.IsNullOrWhiteSpace(formKH.HoTen) ||
+                    string.IsNullOrWhiteSpace(formKH.SoDienThoai) ||
+                    string.IsNullOrWhiteSpace(formKH.Email))
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 string maKH = formKH.MaKhachHang;
                 string tenKH = formKH.HoTen;
                 string sdt = formKH.SoDienThoai;
@@ -165,14 +174,17 @@ namespace GUI
                 string gheDaChon = txtGheDaChon.Text;
                 string tongTien = txtTongTienVe.Text;
 
+
+
+
                 // 2. Tạo mã đặt vé & đối tượng DatVe
                 string maDatVe = "DV" + Guid.NewGuid().ToString("N").Substring(0, 8);
 
                 DatVeDTO datVe = new DatVeDTO
                 {
                     MaDatVe = maDatVe,
-                    MaKhachHang = maKH,
-                    MaNhanVien = "NV001",
+                    MaKhachHang = maKH, 
+                    MaNhanVien = "NV003",
                     ThoiGianDatVe = DateTime.Now,
                     TongTien = decimal.Parse(tongTien.Replace(" VNĐ", "").Replace(",", "")),
                     TrangThaiThanhToan = "Chờ xử lý"

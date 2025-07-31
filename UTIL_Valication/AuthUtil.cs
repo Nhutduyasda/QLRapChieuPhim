@@ -25,10 +25,10 @@ namespace UTIL_Valication
             return user != null;
         }
 
-        //Liểm tra quyền quản lý của tài khoản
+        //Kiểm tra quyền quản lý của tài khoản
         public static Boolean IsManager()
         {
-            return user != null && user.ChucVu == "true";
+            return user != null && user.ChucVu == true;
         }
     }
 }

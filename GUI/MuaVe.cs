@@ -39,7 +39,7 @@ namespace GUI
 
 
         }
-        public void SetUpDataGirdView()
+        private void SetUpDataGirdView()
         {
             dgvSuatChieuPhim.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSuatChieuPhim.AutoGenerateColumns = true;
@@ -47,7 +47,30 @@ namespace GUI
 
             SuatChieuDAL dal = new SuatChieuDAL();
             var danhSach = dal.SelectViewPhimSuatChieu();
-            dgvSuatChieuPhim.DataSource = danhSach;
+            var list = dal.SelectViewThayDoiTrangThaiPhim();
+           
+            foreach (var suat in list)
+            {
+                DateTime ngayChieu;
+                TimeSpan thoiGianKetThuc;
+
+                if (DateTime.TryParse(suat.NgayChieu, out ngayChieu) && TimeSpan.TryParse(suat.ThoiGianKetThuc, out thoiGianKetThuc))
+                {
+                    DateTime gioKetThuc = ngayChieu.Date + thoiGianKetThuc;
+                    if (DateTime.Now > gioKetThuc && suat.TinhTrang != "Ngừng chiếu")
+                    {
+                        suat.TinhTrang = "Ngừng chiếu";
+                        dal.UpdateTinhTrang(suat.MaSuatChieu, "Ngừng chiếu");
+                    }
+                }
+            }
+
+            //Lọc ra những phim không bị "ngưng chiếu"
+            var danhSachKhongNgungChieu = danhSach.Where(s => s.TinhTrang != "Ngừng chiếu").ToList();
+            dgvSuatChieuPhim.DataSource = danhSachKhongNgungChieu;
+
+
+
         }
         public void LoadDataGridView()
         {

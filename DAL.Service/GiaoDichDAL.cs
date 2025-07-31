@@ -14,8 +14,8 @@ namespace DAL_Service
             string sql = @"
                 SELECT 
                     dv.MaDatVe AS MaGiaoDich,
-                    kh.TenKhachHang,
                     nv.TenNhanVien,
+                    kh.TenKhachHang,
                     dv.ThoiGianDatVe,
                     dv.TongTien
                 FROM DAT_VE dv

@@ -20,7 +20,7 @@ namespace GUI
             GiaoDichDAL dal = new GiaoDichDAL();
             dgvLichSuGiaoDich.DataSource = dal.selectAll();
             SetUpDataGirdView();
-
+            SetUpColors();
         }
 
         public void SetUpColors()
@@ -47,8 +47,8 @@ namespace GUI
             dgvLichSuGiaoDich.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             dgvLichSuGiaoDich.Columns["MaGiaoDich"].HeaderText = "Mã Giao Dịch";
-            dgvLichSuGiaoDich.Columns["TenKhachHang"].HeaderText = "Tên Khách Hàng";
             dgvLichSuGiaoDich.Columns["TenNhanVien"].HeaderText = "Tên Nhân Viên";
+            dgvLichSuGiaoDich.Columns["TenKhachHang"].HeaderText = "Tên Khách Hàng";
             dgvLichSuGiaoDich.Columns["ThoiGianDatVe"].HeaderText = "Thời Gian Đặt Vé";
             dgvLichSuGiaoDich.Columns["TongTien"].HeaderText = "Tổng Tiền";
 
@@ -66,14 +66,10 @@ namespace GUI
             {
                 DataGridViewRow row = dgvLichSuGiaoDich.Rows[e.RowIndex];
                 txtMaGD.Text = row.Cells["MaGiaoDich"].Value.ToString();
-                txtKhachHang.Text = row.Cells["TenKhachHang"].Value.ToString();
                 txtTenNhanVien.Text = row.Cells["TenNhanVien"].Value.ToString();
+                txtKhachHang.Text = row.Cells["TenKhachHang"].Value.ToString();
                 txtThoiGianDatVe.Text = Convert.ToDateTime(row.Cells["ThoiGianDatVe"].Value).ToString("dd/MM/yyyy HH:mm:ss");
                 txtTongTien.Text = row.Cells["TongTien"].Value.ToString();
-
-
-
-
 
             }
 
@@ -103,6 +99,20 @@ namespace GUI
             }
 
 
+        }
+
+        private void dgvLichSuGiaoDich_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dgvLichSuGiaoDich.Rows.Count)
+            {
+                DataGridViewRow row = dgvLichSuGiaoDich.Rows[e.RowIndex];
+                txtMaGD.Text = row.Cells["MaGiaoDich"].Value.ToString();
+                txtKhachHang.Text = row.Cells["TenKhachHang"].Value.ToString();
+                txtTenNhanVien.Text = row.Cells["TenNhanVien"].Value.ToString();
+                txtThoiGianDatVe.Text = Convert.ToDateTime(row.Cells["ThoiGianDatVe"].Value).ToString("dd/MM/yyyy HH:mm:ss");
+                txtTongTien.Text = row.Cells["TongTien"].Value.ToString();
+
+            }
         }
     }
 }

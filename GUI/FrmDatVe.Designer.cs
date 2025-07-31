@@ -33,7 +33,6 @@
             label10 = new Label();
             button50 = new Button();
             button51 = new Button();
-            button52 = new Button();
             panel1 = new Panel();
             txtGheDaChon = new TextBox();
             label2 = new Label();
@@ -79,7 +78,7 @@
             button50.BackColor = Color.DarkGreen;
             button50.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button50.ForeColor = Color.White;
-            button50.Location = new Point(83, 580);
+            button50.Location = new Point(83, 568);
             button50.Name = "button50";
             button50.Size = new Size(247, 51);
             button50.TabIndex = 55;
@@ -91,25 +90,13 @@
             button51.BackColor = Color.DarkGreen;
             button51.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button51.ForeColor = Color.White;
-            button51.Location = new Point(83, 503);
+            button51.Location = new Point(83, 452);
             button51.Name = "button51";
             button51.Size = new Size(247, 51);
             button51.TabIndex = 56;
             button51.Text = "Mua";
             button51.UseVisualStyleBackColor = false;
             button51.Click += button51_Click;
-            // 
-            // button52
-            // 
-            button52.BackColor = Color.DarkGreen;
-            button52.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button52.ForeColor = Color.White;
-            button52.Location = new Point(83, 424);
-            button52.Name = "button52";
-            button52.Size = new Size(247, 51);
-            button52.TabIndex = 57;
-            button52.Text = "Tạm tính ";
-            button52.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -118,7 +105,6 @@
             panel1.Controls.Add(txtTongTienVe);
             panel1.Controls.Add(button50);
             panel1.Controls.Add(button51);
-            panel1.Controls.Add(button52);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(label10);
             panel1.Location = new Point(974, 58);
@@ -175,7 +161,6 @@
         private Label label10;
         private Button button50;
         private Button button51;
-        private Button button52;
         private Panel panel1;
         private TextBox txtGheDaChon;
         private Label label2;
