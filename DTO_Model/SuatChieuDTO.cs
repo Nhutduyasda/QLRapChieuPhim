@@ -15,6 +15,7 @@ namespace DTO_Model
         public TimeSpan GioBatDau { get; set; }
         public TimeSpan GioKetThuc { get; set; }
         public decimal GiaVe { get; set; }
+        public string? TinhTrang { get; set; } // Thêm dòng này
 
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -38,6 +39,29 @@ namespace GUI
             this.btnMuaVe.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
             this.btnThemNhanVien.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
             this.btnThemSanPham.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnQLPhongChieu.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnQLPhongChieu.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            this.btnQLGhe.BackColor = ColorTranslator.FromHtml("#FF7043");
+            this.btnQLGhe.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+        }
+        private void LoadImageToPictureBox(PictureBox pictureBox, string url)
+        {
+            try
+            {
+                using (WebClient client = new WebClient())
+                {
+                    byte[] imageData = client.DownloadData(url);
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        pictureBox.Image = Image.FromStream(ms);
+                        pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải ảnh cho control: " + ex.Message);
+            }
         }
 
         private void CheckRole()
@@ -150,6 +174,40 @@ namespace GUI
         private void button6_Click(object sender, EventArgs e)
         {
             ShowFormInPanel(new frmLSGD());
+        }
+
+        private void btnQLPhongChieu_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new FrmQuanLiPhongChieu());
+
+        }
+
+        private void btnQLGhe_Click(object sender, EventArgs e)
+        {
+            ShowFormInPanel(new Ghe());
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            Dictionary<PictureBox, string> imageMap = new Dictionary<PictureBox, string>()
+            {
+                { pictureBox1, "https://t3.ftcdn.net/jpg/01/25/57/92/360_F_125579217_HL9SYmJR8KzVZ5Jfddr4BPyD3QxSSHtZ.jpg" },
+                { pictureBox2, "https://cdn-icons-png.flaticon.com/128/1101/1101793.png" },
+                { pictureBox3, "https://cdn-icons-png.flaticon.com/128/2298/2298687.png" },
+                { pictureBox4, "https://cdn-icons-png.flaticon.com/128/5520/5520204.png" },
+                { pictureBox5, "https://cdn-icons-png.flaticon.com/128/2352/2352167.png" },
+                { pictureBox6, "https://cdn-icons-png.flaticon.com/128/5697/5697997.png" },
+                { pictureBox7, "https://cdn-icons-png.flaticon.com/128/10133/10133762.png" },
+                { pictureBox8, "https://cdn-icons-png.flaticon.com/128/7886/7886492.png" },
+                { pictureBox9, "https://cdn-icons-png.flaticon.com/128/115/115352.png" },
+                { pictureBox10, "https://cdn-icons-png.flaticon.com/128/1286/1286853.png" },
+
+            };
+
+            foreach (var pair in imageMap)
+            {
+                LoadImageToPictureBox(pair.Key, pair.Value);
+            }
         }
     }
 }

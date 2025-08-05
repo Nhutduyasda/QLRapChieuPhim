@@ -81,6 +81,7 @@ namespace GUI
                 dgvDanhSachNV.DataSource = list;
                 dgvDanhSachNV.Columns["MatKhauHash"].Visible = false;
             }
+            list.Reverse();
 
         }
 

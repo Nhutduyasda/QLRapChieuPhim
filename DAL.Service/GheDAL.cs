@@ -39,9 +39,9 @@ namespace DAL_Service
                 {
                     MaGhe = reader["MaGhe"].ToString(),
                     MaPhongChieu = reader["MaPhongChieu"].ToString(),
-                    SoGhe = reader["SoGhe"].ToString(),
-                    HangGhe = reader["HangGhe"].ToString(),
-                    TrangThai = reader["TrangThai"].ToString()
+                    TenGhe = reader["TenGhe"].ToString(),
+                    TrangThai = reader["TrangThai"].ToString(),
+                    ViTri = reader["ViTri"].ToString() 
                 };
                 list.Add(ghe);
             }
@@ -51,20 +51,20 @@ namespace DAL_Service
 
         public override void Insert(GheDTO entity)
         {
-            string sql = "INSERT INTO GHE (MaGhe, MaPhongChieu, SoGhe, HangGhe, TrangThai) VALUES (@0, @1, @2, @3, @4)";
+            string sql = "INSERT INTO GHE (MaGhe, MaPhongChieu, TenGhe ,TrangThai, ViTri) VALUES (@0, @1, @2, @3, @4)";
             List<object> args = new List<object>
             {
-                entity.MaGhe, entity.MaPhongChieu, entity.SoGhe, entity.HangGhe, entity.TrangThai
+                entity.MaGhe, entity.MaPhongChieu, entity.TenGhe, entity.TrangThai, entity.ViTri
             };
             DBUTIL.Update(sql, args);
         }
 
         public override void Update(GheDTO entity)
         {
-            string sql = "UPDATE GHE SET MaPhongChieu = @1, SoGhe = @2, HangGhe = @3, TrangThai = @4 WHERE MaGhe = @0";
+            string sql = "UPDATE GHE SET MaPhongChieu = @1, TenGhe = @2, TrangThai = @3, ViTri = @4 WHERE MaGhe = @0";
             List<object> args = new List<object>
             {
-                entity.MaGhe, entity.MaPhongChieu, entity.SoGhe, entity.HangGhe, entity.TrangThai
+                entity.MaGhe, entity.MaPhongChieu, entity.TenGhe, entity.TrangThai,entity.ViTri
             };
             DBUTIL.Update(sql, args);
         }
@@ -74,5 +74,12 @@ namespace DAL_Service
             string sql = "DELETE FROM GHE WHERE MaGhe = @0";
             DBUTIL.Update(sql, new List<object> { id });
         }
+        public List<GheDTO> selectByMaPhongChieu(string maPhongChieu)
+        {
+            string sql = "SELECT * FROM GHE WHERE MaPhongChieu = @0";
+            List<object> args = new List<object> { maPhongChieu };
+            return selectBySql(sql, args);
+        }
+
     }
 }

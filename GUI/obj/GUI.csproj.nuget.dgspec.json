@@ -11,7 +11,7 @@
         "projectName": "DAL_Service",
         "projectPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj",
         "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\DAL.Service\\obj\\",
+        "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DAL.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -57,6 +57,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.7.0, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[9.0.7, )"
@@ -128,6 +132,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.7.0, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[9.0.7, )"
@@ -160,7 +168,7 @@
         "projectName": "GUI",
         "projectPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\GUI\\GUI.csproj",
         "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\GUI\\obj\\",
+        "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\GUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -203,6 +211,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.7.0, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[9.0.7, )"
@@ -238,7 +250,7 @@
         "projectName": "UTIL_Valication",
         "projectPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\UTIL_Valication\\UTIL_Valication.csproj",
         "packagesPath": "C:\\Users\\nhutduy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nhutduy\\source\\repos\\QLRapChieuPhim\\UTIL_Valication\\obj\\",
+        "outputPath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\UTIL_Valication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -288,6 +300,10 @@
             "MongoDB.Driver.Core": {
               "target": "Package",
               "version": "[2.30.0, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.7.0, )"
             },
             "System.Drawing.Common": {
               "target": "Package",

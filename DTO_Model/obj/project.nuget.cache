@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yRBYXgFst2U=",
+  "dgSpecHash": "/Ho6grF6oDs=",
   "success": true,
   "projectFilePath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DTO_Model\\DTO_Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nhutduy\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.7\\microsoft.win32.systemevents.9.0.7.nupkg.sha512",
+    "C:\\Users\\nhutduy\\.nuget\\packages\\questpdf\\2025.7.0\\questpdf.2025.7.0.nupkg.sha512",
     "C:\\Users\\nhutduy\\.nuget\\packages\\system.drawing.common\\9.0.7\\system.drawing.common.9.0.7.nupkg.sha512"
   ],
   "logs": []

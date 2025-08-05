@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL_Service;
 using DTO_Model;
+using QuestPDF.Fluent;
+using UTIL_Valication;
+
+
 
 namespace GUI
 {
@@ -18,21 +22,33 @@ namespace GUI
         private List<string> gheDaChon = new List<string>();
         private string maSuatChieu;
         private string tenPhim;
+        private string tenPhongChieu;
+        private string maPhongChieu;
+        private TimeSpan gioBatDau;
+        private TimeSpan gioKetThuc;
         private KhachHangDAL khachHangDAL;
-        public FrmDatVe(string maSuatChieu, string tenPhim)
+        public FrmDatVe(string maSuatChieu, string tenPhim, string tenPhongChieu, string maPhongChieu, TimeSpan gioBatDau, TimeSpan gioKetThuc)
         {
             InitializeComponent();
             this.maSuatChieu = maSuatChieu;
             this.tenPhim = tenPhim;
+            this.tenPhongChieu = tenPhongChieu;
+            this.maPhongChieu = maPhongChieu;
+            this.gioBatDau = gioBatDau;
+            this.gioKetThuc = gioKetThuc;
             khachHangDAL = new KhachHangDAL();
 
-            lblTieuDe.Text = $"Màn hình chiếu – {tenPhim}";
+            lblTieuDe.Text = $"Màn hình chiếu ";
+            lblSuatChieu.Text = $"Suất chiếu: {maSuatChieu} ";
+            lblTenPhim.Text = $"Tên phim: {tenPhim} ";
+            lblPhongChieu.Text = $"Phòng chiếu: {tenPhongChieu}";
+            lblTime.Text = $"Thời gian: {gioBatDau.ToString(@"hh\:mm")} - {gioKetThuc.ToString(@"hh\:mm")}";
         }
 
         private List<Button> danhSachGheDaChon = new List<Button>();
         private void FrmDatVe_Load(object sender, EventArgs e)
         {
-            
+
             foreach (Control dieuKhien in this.Controls)
             {
                 if (dieuKhien is Button && dieuKhien.Name.StartsWith("btnGhe"))
@@ -46,6 +62,10 @@ namespace GUI
         private void SuKienChonGhe(object sender, EventArgs e)
         {
             Button ghe = sender as Button;
+            // hiện tổng số ghế đã chọn
+            
+
+
 
             if (danhSachGheDaChon.Contains(ghe))
             {
@@ -62,58 +82,72 @@ namespace GUI
         }
         private void CapNhatThongTinGheVaTien()
         {
-            // Hiển thị danh sách số ghế đã chọn
-            var danhSachSoGhe = danhSachGheDaChon
-                .Select(ghe => ghe.Text)
-                .OrderBy(so => int.Parse(so))
-                .ToList();
+            if (danhSachGheDaChon.Count == 0)
+            {
+                txtTongTienVe.Clear();
+                return;
+            }
+            // Hiển thị tổng số  ghế đã chọn
+            lblDanhSachGheDaChon.Text = $"Số ghế đã chọn: {danhSachGheDaChon.Count}";
 
-            txtGheDaChon.Text = string.Join(", ", danhSachSoGhe);
 
-            // Tính tổng tiền
             int giaVe = 75000;
             int tongTien = danhSachGheDaChon.Count * giaVe;
 
-            txtTongTienVe.Text = tongTien.ToString("N0") + " VNĐ"; 
+            txtTongTienVe.Text = tongTien.ToString("N0") + " VNĐ";
         }
 
         private void TaoGheTuDong()
         {
-            int soLuongGhe = 50;
-            int soCot = 10;
-            int soHang = soLuongGhe / soCot;
+            GheDAL gheDAL = new GheDAL();
+            List<GheDTO> danhSachGhe = gheDAL.selectByMaPhongChieu(maPhongChieu);
+
+            VeDAL veDAL = new VeDAL();
+            List<VeDTO> danhSachVeDaDat = veDAL.GetVeByMaSuatChieu(maSuatChieu);
+
+
+            int soHang = danhSachGhe.Max(g => g.TenGhe[0]) - 'A' + 1;
+            int soCot = danhSachGhe.Where(g => g.TenGhe.StartsWith("A")).Count();
 
             int leTrai = 20;
-            int leTren = 100;
+            int leTren = 50;
             int khoangCach = 10;
 
-            int chieuRongPanel = 920;
-            int chieuCaoPanel = 600;
+            int chieuRongPanel = 836;
+            int chieuCaoPanel = 562;
 
             int chieuRongGhe = (chieuRongPanel - (soCot - 1) * khoangCach) / soCot;
             int chieuCaoGhe = (chieuCaoPanel - (soHang - 1) * khoangCach) / soHang;
 
-            for (int i = 0; i < soLuongGhe; i++)
+            foreach (var gheDTO in danhSachGhe)
             {
+                char hangChar = gheDTO.TenGhe[0];
+                int hang = hangChar - 'A';
+
+
+                int cot = int.Parse(gheDTO.TenGhe.Substring(1)) - 1;
+
                 Button ghe = new Button();
-                ghe.Name = "btnGhe" + (i + 1);
-                ghe.Text = (i + 1).ToString();
+                ghe.Name = gheDTO.MaGhe;
+                ghe.Text = gheDTO.TenGhe;
                 ghe.Width = chieuRongGhe;
                 ghe.Height = chieuCaoGhe;
-
-                int cot = i % soCot;
-                int hang = i / soCot;
-
                 ghe.Left = leTrai + cot * (chieuRongGhe + khoangCach);
                 ghe.Top = leTren + hang * (chieuCaoGhe + khoangCach);
-
                 ghe.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-                ghe.BackColor = SystemColors.Control;
+                ghe.Tag = gheDTO;
 
-                // ✅ Gán đúng MaGhe theo format đã lưu trong database: "btnGhe1", "btnGhe2", ...
-                ghe.Tag = "btnGhe" + (i + 1);
-
-                ghe.Click += SuKienChonGhe;
+                
+                if (danhSachVeDaDat.Any(ve => ve.MaGhe == gheDTO.MaGhe))
+                {
+                    ghe.BackColor = Color.Gray;
+                    ghe.Enabled = false;
+                }
+                else
+                {
+                    ghe.BackColor = SystemColors.Control;
+                    ghe.Click += SuKienChonGhe;
+                }
 
                 this.Controls.Add(ghe);
             }
@@ -121,9 +155,10 @@ namespace GUI
 
 
 
+
+
         private void label2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -145,7 +180,8 @@ namespace GUI
 
         private void button51_Click(object sender, EventArgs e)
         {
-            if (danhSachGheDaChon.Count == 0)
+
+            if (danhSachGheDaChon == null || danhSachGheDaChon.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn ít nhất một ghế!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -153,12 +189,9 @@ namespace GUI
 
             // Mở form nhập thông tin khách hàng
             ThongTinKhachHang formKH = new ThongTinKhachHang();
-            ThongTinNhanVien formNV = new ThongTinNhanVien();
 
             if (formKH.ShowDialog() == DialogResult.OK)
             {
-                // 1. Lấy thông tin khách hàng từ form
-                // Kiểm tra thông tin khách hàng
                 if (string.IsNullOrWhiteSpace(formKH.MaKhachHang) ||
                     string.IsNullOrWhiteSpace(formKH.HoTen) ||
                     string.IsNullOrWhiteSpace(formKH.SoDienThoai) ||
@@ -167,26 +200,22 @@ namespace GUI
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                string maKH = formKH.MaKhachHang;
-                string tenKH = formKH.HoTen;
-                string sdt = formKH.SoDienThoai;
-                string email = formKH.Email;
-                string gheDaChon = txtGheDaChon.Text;
-                string tongTien = txtTongTienVe.Text;
 
+                if (!decimal.TryParse(txtTongTienVe.Text.Replace(" VNĐ", "").Replace(",", ""), out decimal tongTienDecimal))
+                {
+                    MessageBox.Show("Tổng tiền không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-
-
-                // 2. Tạo mã đặt vé & đối tượng DatVe
                 string maDatVe = "DV" + Guid.NewGuid().ToString("N").Substring(0, 8);
 
                 DatVeDTO datVe = new DatVeDTO
                 {
                     MaDatVe = maDatVe,
-                    MaKhachHang = maKH, 
-                    MaNhanVien = "NV003",
+                    MaKhachHang = formKH.MaKhachHang,
+                    MaNhanVien = Session.MaNhanVien, // Cần sửa thành thông tin đăng nhập nếu có
                     ThoiGianDatVe = DateTime.Now,
-                    TongTien = decimal.Parse(tongTien.Replace(" VNĐ", "").Replace(",", "")),
+                    TongTien = tongTienDecimal,
                     TrangThaiThanhToan = "Chờ xử lý"
                 };
 
@@ -196,23 +225,24 @@ namespace GUI
                 VeDAL veDAL = new VeDAL();
                 GheDAL gheDAL = new GheDAL();
 
-                foreach (Button btn in danhSachGheDaChon)
+                List<string> tenGheList = new List<string>();
+
+                foreach (Button btn in danhSachGheDaChon )
                 {
-                    // MaGhe được lưu trong Tag của button
-                    string maGhe = btn.Tag.ToString();
+                    
+                    string maGhe = btn.Name?.ToString();
+                    if (string.IsNullOrWhiteSpace(maGhe)) continue;
 
                     VeDTO ve = new VeDTO
                     {
                         MaVe = "VE" + Guid.NewGuid().ToString("N").Substring(0, 6),
                         MaDatVe = maDatVe,
-                        MaSuatChieu = this.maSuatChieu, 
+                        MaSuatChieu = this.maSuatChieu,
                         MaGhe = maGhe,
                         GiaVe = 75000,
                         LoaiVe = "Người lớn"
                     };
-
                     veDAL.Insert(ve);
-
 
                     GheDTO ghe = new GheDTO
                     {
@@ -220,39 +250,94 @@ namespace GUI
                         TrangThai = "Đã đặt"
                     };
                     gheDAL.UpdateTrangThai(ghe);
+
+                    tenGheList.Add(btn.Text);
                 }
 
-                // 4. Xuất hóa đơn
-                XuatHoaDon(tenKH, sdt, email, gheDaChon, tongTien);
+                XuatHoaDonPDF(maDatVe, formKH.HoTen, formKH.SoDienThoai, formKH.Email, string.Join(", ", tenGheList), txtTongTienVe.Text);
 
-                // 5. Reset
                 foreach (Button ghe in danhSachGheDaChon)
                 {
-                    ghe.Visible = false;
+                    ghe.BackColor = Color.Gray;
+                    ghe.Enabled = false;
                 }
 
+
                 danhSachGheDaChon.Clear();
-                txtGheDaChon.Clear();
                 txtTongTienVe.Clear();
 
                 MessageBox.Show("Đặt vé thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
+
         }
-        private void XuatHoaDon(string hoTen, string sdt, string email, string ghe, string tongTien)
+
+        private void XuatHoaDonPDF(string maDatVe, string hoTen, string sdt, string email, string ghe, string tongTien)
         {
-            string hoaDon = "===== HÓA ĐƠN =====\n";
-            hoaDon += $"Họ tên: {hoTen}\n";
-            hoaDon += $"SĐT: {sdt}\n";
-            hoaDon += $"Email: {email}\n";
-            hoaDon += $"Ghế đã chọn: {ghe}\n";
-            hoaDon += $"Tổng tiền: {tongTien}\n";
-            hoaDon += "----------------------\n";
-            hoaDon += "Cảm ơn quý khách!";
+            // Ensure QuestPDF license is set correctly  
+            QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
 
-            MessageBox.Show(hoaDon, "HÓA ĐƠN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Use the static `Document.Create` method to create a new document  
+            var document = Document.Create(container =>
+            {
+                container.Page(page =>
+                {
+                    page.Margin(50);
+                    page.Content().Column(column =>
+                    {
+                        column.Item().Text("===== HÓA ĐƠN =====").FontSize(20).Bold();
+                        column.Item().Text($"Mã đặt vé: {maDatVe}");
+                        column.Item().Text($"Họ tên: {hoTen}");
+                        column.Item().Text($"SĐT: {sdt}");
+                        column.Item().Text($"Email: {email}");
+                        column.Item().Text($"Suất chiếu: {maSuatChieu}");
+                        column.Item().Text($"Phòng chiếu: {tenPhongChieu}");
+                        column.Item().Text($"Tên phim: {tenPhim}");
+                        column.Item().Text($"Ghế đã chọn: {ghe}");
+                        column.Item().Text($"Thời gian đặt vé: {DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")}");
+                        column.Item().Text($"Tổng tiền: {tongTien}");
+                        column.Item().Text("----------------------");
+                        column.Item().Text("Cảm ơn quý khách!");
+                    });
+                });
+            });
+
+            // lưu hoá đơn vào file PDF vào đường dẫn E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\HoaDon
+            string filePath = @"E:\FPT POLYTECHNIC\PRO131 - Dự án 1 (UDPM.NET)-20250701T003301Z-1-001\QL Rạp Chiếu Phim\HoaDon\" + maDatVe + ".pdf";
+            document.GeneratePdf(filePath);
+
+
+
+
+
+
+            MessageBox.Show("Hóa đơn đã được xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void button50_Click(object sender, EventArgs e)
+        {
+            // Xử lý sự kiện khi người dùng muốn hủy đặt vé
+            if (danhSachGheDaChon.Count == 0)
+            {
+                MessageBox.Show("Không có ghế nào được chọn để hủy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            // Hiển thị thông báo xác nhận
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn hủy đặt vé đã chọn?", "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                // Xóa các ghế đã chọn
+                foreach (Button ghe in danhSachGheDaChon)
+                {
+                    ghe.BackColor = SystemColors.Control; // Đặt lại màu nền của ghế
+                    ghe.Visible = true; // Hiển thị lại ghế
+                }
+                danhSachGheDaChon.Clear();
+                txtTongTienVe.Clear();
+                MessageBox.Show("Đặt vé đã được hủy thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
     }
 }

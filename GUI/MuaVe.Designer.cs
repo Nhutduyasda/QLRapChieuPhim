@@ -39,10 +39,11 @@
             // dgvSuatChieuPhim
             // 
             dgvSuatChieuPhim.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSuatChieuPhim.Location = new Point(12, 124);
+            dgvSuatChieuPhim.Location = new Point(12, 126);
+            dgvSuatChieuPhim.Margin = new Padding(3, 2, 3, 2);
             dgvSuatChieuPhim.Name = "dgvSuatChieuPhim";
             dgvSuatChieuPhim.RowHeadersWidth = 51;
-            dgvSuatChieuPhim.Size = new Size(1141, 330);
+            dgvSuatChieuPhim.Size = new Size(998, 286);
             dgvSuatChieuPhim.TabIndex = 5;
             dgvSuatChieuPhim.CellContentClick += dgvSuatChieuPhim_CellContentClick;
             // 
@@ -50,28 +51,29 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label2.Location = new Point(12, 93);
+            label2.Location = new Point(12, 103);
             label2.Name = "label2";
-            label2.Size = new Size(171, 28);
+            label2.Size = new Size(139, 21);
             label2.TabIndex = 4;
             label2.Text = "Phim đang chiếu";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label1.Location = new Point(12, 9);
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            label1.Location = new Point(12, 59);
             label1.Name = "label1";
-            label1.Size = new Size(594, 62);
+            label1.Size = new Size(309, 32);
             label1.TabIndex = 3;
             label1.Text = "Cinema - Suất Chiếu Phim";
             // 
             // btnChonPhim
             // 
             btnChonPhim.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btnChonPhim.Location = new Point(282, 531);
+            btnChonPhim.Location = new Point(249, 441);
+            btnChonPhim.Margin = new Padding(3, 2, 3, 2);
             btnChonPhim.Name = "btnChonPhim";
-            btnChonPhim.Size = new Size(152, 50);
+            btnChonPhim.Size = new Size(133, 38);
             btnChonPhim.TabIndex = 6;
             btnChonPhim.Text = "Chọn Phim";
             btnChonPhim.UseVisualStyleBackColor = true;
@@ -80,23 +82,26 @@
             // btnHuy
             // 
             btnHuy.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btnHuy.Location = new Point(627, 531);
+            btnHuy.Location = new Point(551, 441);
+            btnHuy.Margin = new Padding(3, 2, 3, 2);
             btnHuy.Name = "btnHuy";
-            btnHuy.Size = new Size(152, 50);
+            btnHuy.Size = new Size(133, 38);
             btnHuy.TabIndex = 7;
             btnHuy.Text = "Huỷ";
             btnHuy.UseVisualStyleBackColor = true;
+            btnHuy.Click += btnHuy_Click;
             // 
             // MuaVe
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1165, 716);
+            ClientSize = new Size(1019, 537);
             Controls.Add(btnHuy);
             Controls.Add(btnChonPhim);
             Controls.Add(dgvSuatChieuPhim);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MuaVe";
             Text = "MuaVe";
             ((System.ComponentModel.ISupportInitialize)dgvSuatChieuPhim).EndInit();

@@ -20,11 +20,29 @@ namespace GUI
         public frmTaoSuatChieu()
         {
             InitializeComponent();
+            dtpGioKetThuc.Enabled = false;
             SetUpDataGirdView();
             LoadDataGridView();
             LoadComboBoxPhim();
             LoadComBoxPhongChieu();
             SetUpColors();
+            dateTimePicker_NgayChieu.Format = DateTimePickerFormat.Custom;
+            dateTimePicker_NgayChieu.CustomFormat = "dd/MM";
+            txtGiaVe.TextChanged += (s, e) =>
+            {
+                if (decimal.TryParse(txtGiaVe.Text, out decimal giaVe))
+                {
+                    txtGiaVe.Text = giaVe.ToString("N0");
+                    txtGiaVe.SelectionStart = txtGiaVe.Text.Length; 
+                }
+                else
+                {
+                    txtGiaVe.Text = "0";
+                }
+            };
+            txtGiaVe.TextAlign = HorizontalAlignment.Right;
+
+
 
         }
         public void SetUpColors()
@@ -53,27 +71,85 @@ namespace GUI
             dgvSuatChieuPhim.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSuatChieuPhim.AutoGenerateColumns = true;
             dgvSuatChieuPhim.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            SuatChieuDAL dal = new SuatChieuDAL();
+            var list = dal.SelectViewThayDoiTrangThaiPhim();
+            foreach (var suat in list)
+            {
+                DateTime ngayChieu;
+                TimeSpan thoiGianKetThuc;
+
+                if (DateTime.TryParse(suat.NgayChieu, out ngayChieu) && TimeSpan.TryParse(suat.ThoiGianKetThuc, out thoiGianKetThuc))
+                {
+                    DateTime gioKetThuc = ngayChieu.Date + thoiGianKetThuc;
+                    if (DateTime.Now > gioKetThuc && suat.TinhTrang != "Ngừng chiếu")
+                    {
+                        suat.TinhTrang = "Ngừng chiếu";
+                        dal.UpdateTinhTrang(suat.MaSuatChieu, "Ngừng chiếu");
+                    }
+                }
+            }
+
+            if (!dgvSuatChieuPhim.Columns.Contains("TinhTrang"))
+            {
+                DataGridViewTextBoxColumn tinhTrangColumn = new DataGridViewTextBoxColumn
+                {
+                    Name = "TinhTrang",
+                    HeaderText = "Tình Trạng",
+                    DataPropertyName = "TinhTrang",
+
+                };
+                dgvSuatChieuPhim.Columns.Add(tinhTrangColumn);
+
+            }
+            ;      
+            dgvSuatChieuPhim.CellFormatting += (s, e) =>
+            {
+                if (e.ColumnIndex == dgvSuatChieuPhim.Columns["TinhTrang"].Index && e.Value != null)
+                {
+                    string tinhTrang = e.Value.ToString();
+                    if (tinhTrang == "Ngừng chiếu")
+                    {
+                        e.CellStyle.BackColor = Color.LightGray;
+                        e.CellStyle.ForeColor = Color.Red;
+                    }
+                }
+            };
+
+
+
 
 
 
         }
         public void LoadDataGridView()
         {
+
             suatChieu = new SuatChieuDAL();
-            List<DTO_Model.SuatChieuDTO> list = suatChieu.selectAll();
+            List<ViewSuatChieu> list = suatChieu.viewSuatChieu();
+            list.Reverse();
             dgvSuatChieuPhim.DataSource = null;
             dgvSuatChieuPhim.DataSource = list;
-            if (list.Count > 0 && list != null)
-            {
-                dgvSuatChieuPhim.DataSource = list;
+            dgvSuatChieuPhim.Columns["GiaVe"].DefaultCellStyle.Format = "N0";
+            dgvSuatChieuPhim.Columns["ThoiGianBatDau"].DefaultCellStyle.Format = "hh\\:mm";
+            dgvSuatChieuPhim.Columns["ThoiGianKetThuc"].DefaultCellStyle.Format = "hh\\:mm";
 
-            }
+            dtpGioBatDau.Format = DateTimePickerFormat.Custom;
+            dtpGioBatDau.CustomFormat = "HH:mm";
+            dtpGioKetThuc.Format = DateTimePickerFormat.Custom;
+            dtpGioKetThuc.CustomFormat = "HH:mm";
+
+
+
         }
         public void LoadComboBoxPhim()
         {
             PhimDAL phimDAL = new PhimDAL();
             List<PhimDTO> listPhim = phimDAL.selectAll();
-            cboPhim.DataSource = listPhim;
+
+            // Chỉ chọn phim đang chiếu
+            var listDangChieu = listPhim.Where(p => p.TinhTrang != "Ngừng chiếu").ToList();
+
+            cboPhim.DataSource = listDangChieu;
             cboPhim.DisplayMember = "TenPhim";
             cboPhim.ValueMember = "MaPhim";
         }
@@ -94,7 +170,7 @@ namespace GUI
         }
         private void btnChonPhim_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -106,38 +182,13 @@ namespace GUI
                 return;
             }
 
-            // Kiểm tra giờ bắt đầu < giờ kết thúc
-            TimeSpan gioBatDau, gioKetThuc;
-            if (!TimeSpan.TryParse(txtBatDau.Text, out gioBatDau) || !TimeSpan.TryParse(txtKetThuc.Text, out gioKetThuc))
-            {
-                MessageBox.Show("Định dạng giờ không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (!Valication.IsStartTimeBeforeEndTime(gioBatDau, gioKetThuc))
-            {
-                MessageBox.Show("Giờ bắt đầu phải nhỏ hơn giờ kết thúc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Kiểm tra suất chiếu có chưa
-            if (!Valication.IsRoomAvailableForTime(
-                cboPhongChieu.SelectedValue.ToString(),
-                dateTimePicker_NgayChieu.Value.Date,
-                gioBatDau,
-                gioKetThuc,
-                suatChieu.selectAll()))
-            {
-                MessageBox.Show("Phòng chiếu đã có suất chiếu trong khoảng thời gian này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtBatDau.Text) ||
-                string.IsNullOrWhiteSpace(txtKetThuc.Text))
+            if (string.IsNullOrWhiteSpace(dtpGioBatDau.Text) ||
+                string.IsNullOrWhiteSpace(dtpGioKetThuc.Text))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if(string.IsNullOrWhiteSpace(txtGiaVe.Text) || !decimal.TryParse(txtGiaVe.Text, out decimal giaVe) || giaVe <= 0)
+            if (string.IsNullOrWhiteSpace(txtGiaVe.Text) || !decimal.TryParse(txtGiaVe.Text, out decimal giaVe) || giaVe <= 0)
             {
                 MessageBox.Show("Giá vé phải là số dương!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -153,9 +204,10 @@ namespace GUI
                         MaPhim = cboPhim.SelectedValue.ToString(),
                         MaPhongChieu = cboPhongChieu.SelectedValue.ToString(),
                         NgayChieu = dateTimePicker_NgayChieu.Value.Date,
-                        GioBatDau = TimeSpan.Parse(txtBatDau.Text),
-                        GioKetThuc = TimeSpan.Parse(txtKetThuc.Text),
-                        GiaVe = decimal.Parse(txtGiaVe.Text)
+                        GioBatDau = dtpGioBatDau.Value.TimeOfDay,
+                        GioKetThuc = dtpGioKetThuc.Value.TimeOfDay,
+                        GiaVe = decimal.Parse(txtGiaVe.Text),
+                        TinhTrang = "Đang Chiếu"
                     };
                     suatChieu.Update(suatChieuDTO);
                     ClearInputFields();
@@ -176,37 +228,37 @@ namespace GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            DateTime thoiGianBatDau = dtpGioBatDau.Value;      
+            DateTime thoiGianKetThuc = dtpGioKetThuc.Value;   
+
+            PhimDTO selectedPhim = cboPhim.SelectedItem as PhimDTO;
+
+            if (selectedPhim == null)
+            {
+                MessageBox.Show("Vui lòng chọn phim!", "Thông báo");
+                return;
+            }
+
+            int thoiLuongPhim = selectedPhim.ThoiLuong;
 
 
-            // Kiểm tra ngày chiếu không ở quá khứ
+
+
+            
+            int thoiLuongTinhToan = (int)(thoiGianKetThuc - thoiGianBatDau).TotalMinutes;
+
+            if (thoiLuongTinhToan != thoiLuongPhim)
+            {
+                MessageBox.Show($"Thời gian bắt đầu và kết thúc không khớp với thời lượng phim!\n" +
+                                $"Thời lượng phim: {thoiLuongPhim} phút\n" +
+                                $"Bạn đã chọn: {thoiLuongTinhToan} phút",
+                                "Lỗi logic", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
             if (!Valication.IsValidFutureDate(dateTimePicker_NgayChieu.Value.Date))
             {
                 MessageBox.Show("Ngày chiếu không được ở quá khứ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Kiểm tra giờ bắt đầu < giờ kết thúc
-            TimeSpan gioBatDau, gioKetThuc;
-            if (!TimeSpan.TryParse(txtBatDau.Text, out gioBatDau) || !TimeSpan.TryParse(txtKetThuc.Text, out gioKetThuc))
-            {
-                MessageBox.Show("Định dạng giờ không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (!Valication.IsStartTimeBeforeEndTime(gioBatDau, gioKetThuc))
-            {
-                MessageBox.Show("Giờ bắt đầu phải nhỏ hơn giờ kết thúc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Kiểm tra suất chiếu có chưa
-            if (!Valication.IsRoomAvailableForTime(
-                cboPhongChieu.SelectedValue.ToString(),
-                dateTimePicker_NgayChieu.Value.Date,
-                gioBatDau,
-                gioKetThuc,
-                suatChieu.selectAll()))
-            {
-                MessageBox.Show("Phòng chiếu đã có suất chiếu trong khoảng thời gian này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
@@ -217,8 +269,8 @@ namespace GUI
                     MaPhim = cboPhim.SelectedValue.ToString(),
                     MaPhongChieu = cboPhongChieu.SelectedValue.ToString(),
                     NgayChieu = dateTimePicker_NgayChieu.Value.Date,
-                    GioBatDau = TimeSpan.Parse(txtBatDau.Text),
-                    GioKetThuc = TimeSpan.Parse(txtKetThuc.Text),
+                    GioBatDau = dtpGioBatDau.Value.TimeOfDay,
+                    GioKetThuc = dtpGioKetThuc.Value.TimeOfDay,
                     GiaVe = decimal.Parse(txtGiaVe.Text)
 
 
@@ -266,8 +318,8 @@ namespace GUI
             cboPhim.SelectedIndex = -1;
             cboPhongChieu.SelectedIndex = -1;
             dateTimePicker_NgayChieu.Value = DateTime.Now;
-            txtBatDau.Clear();
-            txtKetThuc.Clear();
+            dtpGioBatDau.Value = DateTime.Now;
+            dtpGioKetThuc.Value = DateTime.Now.AddHours(2);
             txtGiaVe.Clear();
         }
 
@@ -289,15 +341,49 @@ namespace GUI
             if (e.RowIndex >= 0 && e.RowIndex < dgvSuatChieuPhim.Rows.Count)
             {
                 DataGridViewRow selectedRow = dgvSuatChieuPhim.Rows[e.RowIndex];
+
                 txtMaSuatChieu.Text = selectedRow.Cells["MaSuatChieu"].Value.ToString();
-                cboPhim.SelectedValue = selectedRow.Cells["MaPhim"].Value;
-                cboPhongChieu.SelectedValue = selectedRow.Cells["MaPhongChieu"].Value;
+
+                string tenPhim = selectedRow.Cells["TenPhim"].Value.ToString();
+                cboPhim.SelectedIndex = cboPhim.FindStringExact(tenPhim);
+
+                string tenPhongChieu = selectedRow.Cells["TenPhongChieu"].Value.ToString();
+                cboPhongChieu.SelectedIndex = cboPhongChieu.FindStringExact(tenPhongChieu);
+
                 dateTimePicker_NgayChieu.Value = Convert.ToDateTime(selectedRow.Cells["NgayChieu"].Value);
-                txtBatDau.Text = selectedRow.Cells["GioBatDau"].Value.ToString();
-                txtKetThuc.Text = selectedRow.Cells["GioKetThuc"].Value.ToString();
+
+                dtpGioBatDau.Value = DateTime.Today.Add((TimeSpan)selectedRow.Cells["ThoiGianBatDau"].Value);
+                dtpGioKetThuc.Value = DateTime.Today.Add((TimeSpan)selectedRow.Cells["ThoiGianKetThuc"].Value);
+
                 txtGiaVe.Text = selectedRow.Cells["GiaVe"].Value.ToString();
             }
 
         }
+        private void cboPhim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TinhGioKetThuc();
+        }
+
+        private void dtpGioBatDau_ValueChanged(object sender, EventArgs e)
+        {
+            TinhGioKetThuc();
+        }
+        private void TinhGioKetThuc()
+        {
+            if (cboPhim.SelectedItem is PhimDTO selectedPhim)
+            {
+                int thoiLuong = selectedPhim.ThoiLuong;
+                DateTime gioBatDau = dtpGioBatDau.Value;
+                DateTime gioKetThuc = gioBatDau.AddMinutes(thoiLuong);
+                dtpGioKetThuc.Value = gioKetThuc;
+            }
+            else
+            {
+                dtpGioKetThuc.Value = dtpGioBatDau.Value; 
+            }
+            
+        }
+
+
     }
 }

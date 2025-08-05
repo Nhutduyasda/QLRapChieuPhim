@@ -69,6 +69,7 @@ namespace GUI
             {
                 AuthUtil.user = nhanVien;
                 this.DialogResult = DialogResult.OK;
+                Session.MaNhanVien = nhanVien.MaNhanVien;
                 this.Close();
             }
 

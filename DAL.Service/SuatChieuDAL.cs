@@ -59,8 +59,8 @@ namespace DAL_Service
 
         public override void Insert(SuatChieuDTO entity)
         {
-            string sql = @"INSERT INTO SUAT_CHIEU (MaSuatChieu, MaPhim, MaPhongChieu,NgayChieu, ThoiGianBatDau, ThoiGianKetThuc, GiaVe)
-                           VALUES (@0, @1, @2, @3, @4, @5, @6)";
+            string sql = @"INSERT INTO SUAT_CHIEU (MaSuatChieu, MaPhim, MaPhongChieu, NgayChieu, ThoiGianBatDau, ThoiGianKetThuc, GiaVe, TinhTrang)
+               VALUES (@0, @1, @2, @3, @4, @5, @6, @7)";
             List<object> parameters = new List<object>
             {
                 entity.MaSuatChieu,
@@ -69,8 +69,9 @@ namespace DAL_Service
                 entity.NgayChieu,
                 entity.GioBatDau,
                 entity.GioKetThuc,
-                entity.GiaVe
-            };
+                entity.GiaVe,
+                entity.TinhTrang ?? "Đang chiếu"
+             };
             DBUTIL.Update(sql, parameters);
         }
 
@@ -78,7 +79,7 @@ namespace DAL_Service
         {
             string sql = @"UPDATE SUAT_CHIEU 
                            SET MaPhim = @1, MaPhongChieu = @2,
-                               NgayChieu = @3, ThoiGianBatDau = @4, ThoiGianKetThuc = @5, GiaVe = @6
+                               NgayChieu = @3, ThoiGianBatDau = @4, ThoiGianKetThuc = @5, GiaVe = @6 , TinhTrang = @7
                            WHERE MaSuatChieu = @0";
             List<object> parameters = new List<object>
             {
@@ -88,7 +89,8 @@ namespace DAL_Service
                 entity.NgayChieu,
                 entity.GioBatDau,
                 entity.GioKetThuc,
-                entity.GiaVe
+                entity.GiaVe,
+                 entity.TinhTrang ?? "Đang chiếu"
             };
             DBUTIL.Update(sql, parameters);
         }
@@ -133,10 +135,10 @@ namespace DAL_Service
             }
             return list;
         }
-        // Update trạng thái phim
+        
         public void UpdateTinhTrang(string maSuatChieu, string tinhTrang)
         {
-            string sql = "UPDATE PHIM SET TinhTrang = @0 WHERE MaPhim = (SELECT MaPhim FROM SUAT_CHIEU WHERE MaSuatChieu = @1)";
+            string sql = "UPDATE SUAT_CHIEU SET TinhTrang = @0 WHERE MaSuatChieu = @1";
             List<object> parameters = new List<object> { tinhTrang, maSuatChieu };
             DBUTIL.Update(sql, parameters);
         }
@@ -147,6 +149,7 @@ namespace DAL_Service
             SELECT 
                 SC.MaSuatChieu,
                 P.TenPhim,
+                PC.MaPhongChieu,
                 PC.TenPhongChieu,
                 P.HinhAnh,
                 SC.GiaVe,
@@ -156,7 +159,6 @@ namespace DAL_Service
             JOIN PHONG_CHIEU PC ON SC.MaPhongChieu = PC.MaPhongChieu
 
     ";
-
             try
             {
                 SqlDataReader reader = DBUTIL.Query(sql, new List<object>());
@@ -166,10 +168,10 @@ namespace DAL_Service
                     {
                         MaSuatChieu = reader["MaSuatChieu"].ToString(),
                         TenPhim = reader["TenPhim"].ToString(),
+                        MaPhongChieu = reader["MaPhongChieu"].ToString(),
                         TenPhongChieu = reader["TenPhongChieu"].ToString(),
                         HinhAnh = reader["HinhAnh"].ToString(),
-                        TinhTrang = reader["TinhTrang"].ToString(),
-                        GiaVe = Convert.ToDecimal(reader["GiaVe"])
+                        GiaVe = Convert.ToDecimal(reader["GiaVe"]),
                     };
                     list.Add(item);
                 }
@@ -182,7 +184,73 @@ namespace DAL_Service
 
             return list;
         }
+        public List<ViewSuatChieu> viewSuatChieu()
+        {
+            List<ViewSuatChieu> list = new List<ViewSuatChieu>();
+            string sql = @"
+        SELECT 
+            SC.MaSuatChieu,
+            P.TenPhim,
+            PC.TenPhongChieu,
+            SC.NgayChieu,
+            SC.ThoiGianBatDau,
+            SC.ThoiGianKetThuc,
+            SC.GiaVe
+        FROM SUAT_CHIEU SC
+        JOIN PHIM P ON SC.MaPhim = P.MaPhim
+        JOIN PHONG_CHIEU PC ON SC.MaPhongChieu = PC.MaPhongChieu
+    ";
+            try
+            {
+                SqlDataReader reader = DBUTIL.Query(sql, new List<object>());
+                while (reader.Read())
+                {
+                    ViewSuatChieu item = new ViewSuatChieu
+                    {
+                        MaSuatChieu = reader["MaSuatChieu"].ToString(),
+                        TenPhim = reader["TenPhim"].ToString(),
+                        TenPhongChieu = reader["TenPhongChieu"].ToString(),
+                        NgayChieu = Convert.ToDateTime(reader["NgayChieu"]),
+                        ThoiGianBatDau = (TimeSpan)reader["ThoiGianBatDau"],
+                        ThoiGianKetThuc = (TimeSpan)reader["ThoiGianKetThuc"],
+                        GiaVe = Convert.ToDecimal(reader["GiaVe"])
+                    };
+                    list.Add(item);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error selecting ViewSuatChieu", ex);
+            }
 
+            return list;
+        }
+
+
+        public SuatChieuDTO selectByMa(string maSuat)
+        {
+            string query = "SELECT * FROM SUAT_CHIEU WHERE MaSuatChieu = @0";
+            List<object> parameters = new List<object>() { maSuat };
+            SqlDataReader reader = DBUTIL.Query(query, parameters);
+
+            if (reader.Read())
+            {
+                SuatChieuDTO sc = new SuatChieuDTO
+                {
+                    MaSuatChieu = reader["MaSuatChieu"].ToString(),
+                    MaPhongChieu = reader["MaPhongChieu"].ToString(),
+                    MaPhim = reader["MaPhim"].ToString(),
+                    NgayChieu = Convert.ToDateTime(reader["NgayChieu"]),
+                    GioBatDau = (TimeSpan)reader["ThoiGianBatDau"],
+                    GioKetThuc = (TimeSpan)reader["ThoiGianKetThuc"]
+                };
+                reader.Close();
+                return sc;
+            }
+            reader.Close();
+            return null;
+        }
 
 
     }

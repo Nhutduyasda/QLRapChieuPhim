@@ -9,6 +9,12 @@ namespace DAL_Service
 {
     public class VeDAL : SystemDAL<VeDTO, string>
     {
+        public List<VeDTO> GetVeByMaSuatChieu(string maSuatChieu)
+        {
+            string sql = "SELECT * FROM Ve WHERE MaSuatChieu = @0";
+            var args = new List<object> { maSuatChieu };
+            return selectBySql(sql, args);
+        }
         public override List<VeDTO> selectAll()
         {
             string sql = "SELECT * FROM VE";

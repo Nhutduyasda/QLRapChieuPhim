@@ -14,6 +14,7 @@
             Application.Run(new Main());
         }
     }
+    
     public class CustomAppContext : ApplicationContext
     {
         private MuaVe muaVe;
@@ -31,11 +32,15 @@
             {
                 string maSuat = muaVe.SelectedMaSuat;
                 string tenPhim = muaVe.SelectedTenPhim;
+                string tenPhongChieu = muaVe.SelectedTenPhongChieu;
+                string maPhongChieu = muaVe.SelectedMaPhongChieu;
+                TimeSpan gioBatDau = muaVe.SelectedGioBatDau;
+                TimeSpan gioKetThuc = muaVe.SelectedGioKetThuc;
 
                 // Kiểm tra nếu có chọn suất thì mới mở form đặt vé
-                if (!string.IsNullOrEmpty(maSuat) && !string.IsNullOrEmpty(tenPhim))
+                if (!string.IsNullOrEmpty(maSuat) && !string.IsNullOrEmpty(tenPhim) && !string.IsNullOrEmpty(tenPhongChieu))
                 {
-                    ShowFrmDatVe(maSuat, tenPhim);
+                    ShowFrmDatVe(maSuat, tenPhim, tenPhongChieu, maPhongChieu, gioBatDau, gioKetThuc);
                 }
                 else
                 {
@@ -45,9 +50,9 @@
             muaVe.Show();
         }
 
-        private void ShowFrmDatVe(string maSuat, string tenPhim)
+        private void ShowFrmDatVe(string maSuat, string tenPhim, string tenPhongChieu, string maPhongChieu, TimeSpan gioBatDau, TimeSpan gioKetThuc)
         {
-            datVeForm = new FrmDatVe(maSuat, tenPhim);
+            datVeForm = new FrmDatVe(maSuat, tenPhim, tenPhongChieu, maPhongChieu, gioBatDau, gioKetThuc);
             datVeForm.StartPosition = FormStartPosition.CenterScreen;
             datVeForm.FormClosed += (s, e) =>
             {

@@ -42,7 +42,7 @@ namespace DAL_Service
                         TenPhim = reader["TenPhim"].ToString(),
                         TheLoai = reader["TheLoai"].ToString(),
                         TinhTrang = reader["TinhTrang"].ToString(),
-                        ThoiLuong = reader["ThoiLuong"].ToString(),
+                        ThoiLuong = Convert.ToInt32(reader["ThoiLuong"]),
                         HinhAnh = reader["HinhAnh"].ToString(), 
                         DoTuoi = reader["DoTuoi"].ToString(),
                     };

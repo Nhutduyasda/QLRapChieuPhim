@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uKPhcI2Ou5A=",
+  "dgSpecHash": "k2QoSGsoKjY=",
   "success": true,
   "projectFilePath": "C:\\Users\\nhutduy\\Source\\Repos\\QLRapChieuPhim\\DAL.Service\\DAL_Service.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,7 @@
     "C:\\Users\\nhutduy\\.nuget\\packages\\mongodb.bson\\2.30.0\\mongodb.bson.2.30.0.nupkg.sha512",
     "C:\\Users\\nhutduy\\.nuget\\packages\\mongodb.driver.core\\2.30.0\\mongodb.driver.core.2.30.0.nupkg.sha512",
     "C:\\Users\\nhutduy\\.nuget\\packages\\mongodb.libmongocrypt\\1.12.0\\mongodb.libmongocrypt.1.12.0.nupkg.sha512",
+    "C:\\Users\\nhutduy\\.nuget\\packages\\questpdf\\2025.7.0\\questpdf.2025.7.0.nupkg.sha512",
     "C:\\Users\\nhutduy\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
     "C:\\Users\\nhutduy\\.nuget\\packages\\snappier\\1.0.0\\snappier.1.0.0.nupkg.sha512",
     "C:\\Users\\nhutduy\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",

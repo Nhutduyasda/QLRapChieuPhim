@@ -42,21 +42,22 @@
             btnThemAnh = new Button();
             txtTenPhim = new TextBox();
             txtMaPhim = new TextBox();
-            txtTheLoai = new TextBox();
-            txtThoiLuong = new TextBox();
             dgvDanhSachPhim = new DataGridView();
             pictureBox_anhPhim = new PictureBox();
             cbo_TinhTrang = new ComboBox();
             cboDoTuoi = new ComboBox();
+            cboTheLoai = new ComboBox();
+            nudThoiLuong = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)dgvDanhSachPhim).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_anhPhim).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudThoiLuong).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label1.Location = new Point(32, 25);
+            label1.Location = new Point(24, 48);
             label1.Name = "label1";
             label1.Size = new Size(203, 38);
             label1.TabIndex = 0;
@@ -66,7 +67,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 10.2F);
-            label2.Location = new Point(70, 438);
+            label2.Location = new Point(62, 460);
             label2.Name = "label2";
             label2.Size = new Size(78, 23);
             label2.TabIndex = 1;
@@ -76,7 +77,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10.2F);
-            label3.Location = new Point(70, 491);
+            label3.Location = new Point(62, 513);
             label3.Name = "label3";
             label3.Size = new Size(80, 23);
             label3.TabIndex = 2;
@@ -86,7 +87,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 10.2F);
-            label4.Location = new Point(70, 545);
+            label4.Location = new Point(62, 568);
             label4.Name = "label4";
             label4.Size = new Size(70, 23);
             label4.TabIndex = 3;
@@ -96,7 +97,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 10.2F);
-            label5.Location = new Point(526, 491);
+            label5.Location = new Point(518, 513);
             label5.Name = "label5";
             label5.Size = new Size(92, 23);
             label5.TabIndex = 4;
@@ -106,7 +107,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 10.2F);
-            label6.Location = new Point(522, 438);
+            label6.Location = new Point(514, 460);
             label6.Name = "label6";
             label6.Size = new Size(89, 23);
             label6.TabIndex = 5;
@@ -116,7 +117,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 10.2F);
-            label8.Location = new Point(522, 545);
+            label8.Location = new Point(514, 568);
             label8.Name = "label8";
             label8.Size = new Size(70, 23);
             label8.TabIndex = 7;
@@ -126,7 +127,7 @@
             // 
             btnThemPhim.BackColor = Color.FromArgb(0, 192, 0);
             btnThemPhim.ForeColor = SystemColors.ButtonHighlight;
-            btnThemPhim.Location = new Point(198, 622);
+            btnThemPhim.Location = new Point(190, 644);
             btnThemPhim.Name = "btnThemPhim";
             btnThemPhim.Size = new Size(131, 44);
             btnThemPhim.TabIndex = 8;
@@ -138,7 +139,7 @@
             // 
             btnLamMoi.BackColor = Color.FromArgb(0, 192, 0);
             btnLamMoi.ForeColor = SystemColors.ButtonHighlight;
-            btnLamMoi.Location = new Point(694, 622);
+            btnLamMoi.Location = new Point(686, 644);
             btnLamMoi.Name = "btnLamMoi";
             btnLamMoi.Size = new Size(133, 44);
             btnLamMoi.TabIndex = 9;
@@ -150,7 +151,7 @@
             // 
             btnXoa.BackColor = Color.FromArgb(0, 192, 0);
             btnXoa.ForeColor = SystemColors.ButtonHighlight;
-            btnXoa.Location = new Point(535, 622);
+            btnXoa.Location = new Point(527, 644);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(133, 44);
             btnXoa.TabIndex = 10;
@@ -162,7 +163,7 @@
             // 
             btnCapNhat.BackColor = Color.FromArgb(0, 192, 0);
             btnCapNhat.ForeColor = SystemColors.ButtonHighlight;
-            btnCapNhat.Location = new Point(372, 622);
+            btnCapNhat.Location = new Point(365, 644);
             btnCapNhat.Name = "btnCapNhat";
             btnCapNhat.Size = new Size(133, 44);
             btnCapNhat.TabIndex = 11;
@@ -174,7 +175,7 @@
             // 
             btnThemAnh.BackColor = Color.FromArgb(0, 192, 0);
             btnThemAnh.ForeColor = SystemColors.ButtonHighlight;
-            btnThemAnh.Location = new Point(981, 646);
+            btnThemAnh.Location = new Point(973, 668);
             btnThemAnh.Name = "btnThemAnh";
             btnThemAnh.Size = new Size(121, 44);
             btnThemAnh.TabIndex = 12;
@@ -185,49 +186,34 @@
             // txtTenPhim
             // 
             txtTenPhim.Font = new Font("Segoe UI", 10.2F);
-            txtTenPhim.Location = new Point(193, 484);
+            txtTenPhim.Location = new Point(185, 507);
             txtTenPhim.Name = "txtTenPhim";
-            txtTenPhim.Size = new Size(264, 30);
+            txtTenPhim.Size = new Size(265, 30);
             txtTenPhim.TabIndex = 13;
             // 
             // txtMaPhim
             // 
             txtMaPhim.Font = new Font("Segoe UI", 10.2F);
-            txtMaPhim.Location = new Point(194, 431);
+            txtMaPhim.Location = new Point(186, 453);
             txtMaPhim.Name = "txtMaPhim";
             txtMaPhim.ReadOnly = true;
-            txtMaPhim.Size = new Size(264, 30);
+            txtMaPhim.Size = new Size(265, 30);
             txtMaPhim.TabIndex = 14;
-            // 
-            // txtTheLoai
-            // 
-            txtTheLoai.Font = new Font("Segoe UI", 10.2F);
-            txtTheLoai.Location = new Point(193, 538);
-            txtTheLoai.Name = "txtTheLoai";
-            txtTheLoai.Size = new Size(264, 30);
-            txtTheLoai.TabIndex = 15;
-            // 
-            // txtThoiLuong
-            // 
-            txtThoiLuong.Font = new Font("Segoe UI", 10.2F);
-            txtThoiLuong.Location = new Point(650, 484);
-            txtThoiLuong.Name = "txtThoiLuong";
-            txtThoiLuong.Size = new Size(263, 30);
-            txtThoiLuong.TabIndex = 16;
             // 
             // dgvDanhSachPhim
             // 
             dgvDanhSachPhim.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDanhSachPhim.Location = new Point(32, 66);
+            dgvDanhSachPhim.Location = new Point(24, 89);
             dgvDanhSachPhim.Name = "dgvDanhSachPhim";
             dgvDanhSachPhim.RowHeadersWidth = 51;
             dgvDanhSachPhim.Size = new Size(1121, 340);
             dgvDanhSachPhim.TabIndex = 20;
             dgvDanhSachPhim.CellClick += dgvDanhSachPhim_CellClick;
+            dgvDanhSachPhim.CellContentClick += dgvDanhSachPhim_CellContentClick;
             // 
             // pictureBox_anhPhim
             // 
-            pictureBox_anhPhim.Location = new Point(964, 438);
+            pictureBox_anhPhim.Location = new Point(957, 460);
             pictureBox_anhPhim.Name = "pictureBox_anhPhim";
             pictureBox_anhPhim.Size = new Size(169, 177);
             pictureBox_anhPhim.SizeMode = PictureBoxSizeMode.Zoom;
@@ -237,30 +223,46 @@
             // cbo_TinhTrang
             // 
             cbo_TinhTrang.FormattingEnabled = true;
-            cbo_TinhTrang.Location = new Point(650, 433);
+            cbo_TinhTrang.Location = new Point(642, 456);
             cbo_TinhTrang.Name = "cbo_TinhTrang";
-            cbo_TinhTrang.Size = new Size(264, 28);
+            cbo_TinhTrang.Size = new Size(265, 28);
             cbo_TinhTrang.TabIndex = 22;
             // 
             // cboDoTuoi
             // 
             cboDoTuoi.FormattingEnabled = true;
-            cboDoTuoi.Location = new Point(650, 545);
+            cboDoTuoi.Location = new Point(642, 568);
             cboDoTuoi.Name = "cboDoTuoi";
-            cboDoTuoi.Size = new Size(264, 28);
+            cboDoTuoi.Size = new Size(265, 28);
             cboDoTuoi.TabIndex = 23;
+            // 
+            // cboTheLoai
+            // 
+            cboTheLoai.FormattingEnabled = true;
+            cboTheLoai.Location = new Point(185, 568);
+            cboTheLoai.Name = "cboTheLoai";
+            cboTheLoai.Size = new Size(265, 28);
+            cboTheLoai.TabIndex = 24;
+            // 
+            // nudThoiLuong
+            // 
+            nudThoiLuong.Location = new Point(642, 511);
+            nudThoiLuong.Margin = new Padding(3, 4, 3, 4);
+            nudThoiLuong.Name = "nudThoiLuong";
+            nudThoiLuong.Size = new Size(265, 27);
+            nudThoiLuong.TabIndex = 25;
             // 
             // ThemPhim
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1165, 716);
+            Controls.Add(nudThoiLuong);
+            Controls.Add(cboTheLoai);
             Controls.Add(cboDoTuoi);
             Controls.Add(cbo_TinhTrang);
             Controls.Add(pictureBox_anhPhim);
             Controls.Add(dgvDanhSachPhim);
-            Controls.Add(txtThoiLuong);
-            Controls.Add(txtTheLoai);
             Controls.Add(txtMaPhim);
             Controls.Add(txtTenPhim);
             Controls.Add(btnThemAnh);
@@ -280,6 +282,7 @@
             Load += ThemPhim_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDanhSachPhim).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_anhPhim).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudThoiLuong).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -300,11 +303,11 @@
         private Button btnThemAnh;
         private TextBox txtTenPhim;
         private TextBox txtMaPhim;
-        private TextBox txtTheLoai;
-        private TextBox txtThoiLuong;
         private DataGridView dgvDanhSachPhim;
         private PictureBox pictureBox_anhPhim;
         private ComboBox cbo_TinhTrang;
         private ComboBox cboDoTuoi;
+        private ComboBox cboTheLoai;
+        private NumericUpDown nudThoiLuong;
     }
 }

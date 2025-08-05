@@ -46,12 +46,6 @@ namespace GUI
             dgvLichSuGiaoDich.AutoGenerateColumns = true;
             dgvLichSuGiaoDich.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-            dgvLichSuGiaoDich.Columns["MaGiaoDich"].HeaderText = "Mã Giao Dịch";
-            dgvLichSuGiaoDich.Columns["TenNhanVien"].HeaderText = "Tên Nhân Viên";
-            dgvLichSuGiaoDich.Columns["TenKhachHang"].HeaderText = "Tên Khách Hàng";
-            dgvLichSuGiaoDich.Columns["ThoiGianDatVe"].HeaderText = "Thời Gian Đặt Vé";
-            dgvLichSuGiaoDich.Columns["TongTien"].HeaderText = "Tổng Tiền";
-
         }
 
 
@@ -62,16 +56,6 @@ namespace GUI
 
         private void dgvDanhSachKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.RowIndex < dgvLichSuGiaoDich.Rows.Count)
-            {
-                DataGridViewRow row = dgvLichSuGiaoDich.Rows[e.RowIndex];
-                txtMaGD.Text = row.Cells["MaGiaoDich"].Value.ToString();
-                txtTenNhanVien.Text = row.Cells["TenNhanVien"].Value.ToString();
-                txtKhachHang.Text = row.Cells["TenKhachHang"].Value.ToString();
-                txtThoiGianDatVe.Text = Convert.ToDateTime(row.Cells["ThoiGianDatVe"].Value).ToString("dd/MM/yyyy HH:mm:ss");
-                txtTongTien.Text = row.Cells["TongTien"].Value.ToString();
-
-            }
 
 
         }
@@ -106,11 +90,17 @@ namespace GUI
             if (e.RowIndex >= 0 && e.RowIndex < dgvLichSuGiaoDich.Rows.Count)
             {
                 DataGridViewRow row = dgvLichSuGiaoDich.Rows[e.RowIndex];
-                txtMaGD.Text = row.Cells["MaGiaoDich"].Value.ToString();
+                txtMaGD.Text = row.Cells["MaDatVe"].Value.ToString();
                 txtKhachHang.Text = row.Cells["TenKhachHang"].Value.ToString();
+                //txtEmail.Text = row.Cells["Email"].Value.ToString();
                 txtTenNhanVien.Text = row.Cells["TenNhanVien"].Value.ToString();
                 txtThoiGianDatVe.Text = Convert.ToDateTime(row.Cells["ThoiGianDatVe"].Value).ToString("dd/MM/yyyy HH:mm:ss");
-                txtTongTien.Text = row.Cells["TongTien"].Value.ToString();
+                txtTongTien.Text = Convert.ToDecimal(row.Cells["TongTien"].Value).ToString("C");
+                txtMaSuatChieu.Text = row.Cells["MaSuatChieu"].Value.ToString();
+                txtTenPhongChieu.Text = row.Cells["TenPhongChieu"].Value.ToString();
+                txtTenPhim.Text = row.Cells["TenPhim"].Value.ToString();
+                txtMaGhe.Text = row.Cells["MaGhe"].Value.ToString();
+
 
             }
         }

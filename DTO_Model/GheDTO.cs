@@ -10,8 +10,8 @@ namespace DTO_Model
     {
         public string? MaGhe { get; set; }
         public string? MaPhongChieu { get; set; }
-        public string? SoGhe { get; set; }
-        public string? HangGhe { get; set; }
+        public string? TenGhe { get; set; }
         public string? TrangThai { get; set; }
+        public string? ViTri { get; set; } 
     }
 }

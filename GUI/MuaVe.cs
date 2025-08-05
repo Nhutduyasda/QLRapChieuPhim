@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL_Service;
+using DTO_Model;
 
 namespace GUI
 {
@@ -16,6 +17,10 @@ namespace GUI
         private SuatChieuDAL suatChieu;
         public string SelectedMaSuat { get; private set; }
         public string SelectedTenPhim { get; private set; }
+        public string SelectedTenPhongChieu { get; private set; }
+        public string SelectedMaPhongChieu { get; private set; }
+        public TimeSpan SelectedGioBatDau { get; private set; }
+        public TimeSpan SelectedGioKetThuc { get; private set; }
         public MuaVe()
         {
             InitializeComponent();
@@ -48,41 +53,87 @@ namespace GUI
             SuatChieuDAL dal = new SuatChieuDAL();
             var danhSach = dal.SelectViewPhimSuatChieu();
             var list = dal.SelectViewThayDoiTrangThaiPhim();
-           
-            foreach (var suat in list)
+
+            dgvSuatChieuPhim.Columns.Clear();
+            dgvSuatChieuPhim.Rows.Clear();
+
+
+
+            //// Tạo các cột (trừ HinhAnh)
+            dgvSuatChieuPhim.Columns.Add("MaSuatChieu", "Mã Suất Chiếu");
+            dgvSuatChieuPhim.Columns.Add("TenPhim", "Tên phim");
+            dgvSuatChieuPhim.Columns.Add("MaPhongChieu", "Mã phòng chiếu");
+            dgvSuatChieuPhim.Columns["MaPhongChieu"].Visible = false; 
+            dgvSuatChieuPhim.Columns.Add("TenPhongChieu", "Tên phòng chiếu");
+            dgvSuatChieuPhim.Columns.Add("TinhTrang", "Tình trạng");
+            dgvSuatChieuPhim.Columns["TinhTrang"].Visible = false;
+            dgvSuatChieuPhim.Columns.Add("GiaVe", "Giá vé");
+
+            //// Thêm cột hình ảnh kiểu hình ảnh
+            DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
+            imgCol.Name = "AnhPhim";
+            imgCol.HeaderText = "Hình ảnh";
+            imgCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
+
+            dgvSuatChieuPhim.Columns.Add(imgCol);
+
+            dgvSuatChieuPhim.Columns["MaSuatChieu"].Width = 110;
+            dgvSuatChieuPhim.Columns["TenPhim"].Width = 180;
+            dgvSuatChieuPhim.Columns["TenPhongChieu"].Width = 180;
+            dgvSuatChieuPhim.Columns["TinhTrang"].Width = 110;
+            dgvSuatChieuPhim.Columns["GiaVe"].Width = 100;
+            dgvSuatChieuPhim.Columns["AnhPhim"].Width = 150; // Để ảnh to hơn
+            dgvSuatChieuPhim.RowTemplate.Height = 120;
+            foreach (var item in danhSach)
             {
-                DateTime ngayChieu;
-                TimeSpan thoiGianKetThuc;
+                // Lấy thông tin suất chiếu từ database
+                var sc = suatChieu.selectByMa(item.MaSuatChieu);
+                if (sc == null)
+                    continue;
 
-                if (DateTime.TryParse(suat.NgayChieu, out ngayChieu) && TimeSpan.TryParse(suat.ThoiGianKetThuc, out thoiGianKetThuc))
+                // Thời gian kết thúc thực tế của suất chiếu
+                DateTime thoiGianKetThuc = sc.NgayChieu.Date + sc.GioKetThuc;
+
+                // Nếu suất chiếu đã kết thúc thì bỏ qua
+                if (DateTime.Now > thoiGianKetThuc)
+                    continue;
+
+                Image img = null;
+                if (!string.IsNullOrEmpty(item.HinhAnh) && System.IO.File.Exists(item.HinhAnh))
                 {
-                    DateTime gioKetThuc = ngayChieu.Date + thoiGianKetThuc;
-                    if (DateTime.Now > gioKetThuc && suat.TinhTrang != "Ngừng chiếu")
-                    {
-                        suat.TinhTrang = "Ngừng chiếu";
-                        dal.UpdateTinhTrang(suat.MaSuatChieu, "Ngừng chiếu");
-                    }
+                    img = Image.FromFile(item.HinhAnh);
                 }
+                // kiểm tra tình trạng phim
+                string tinhTrang = "Đang chiếu";
+                if (list.Any(x => x.MaSuatChieu == item.MaSuatChieu && x.TinhTrang == "Ngừng chiếu"))
+                {
+                    tinhTrang = "Ngừng chiếu";
+                }
+                if (tinhTrang == "Ngừng chiếu")
+                {
+                    continue;
+                }
+                dgvSuatChieuPhim.Rows.Add(
+                    item.MaSuatChieu,
+                    item.TenPhim,
+                    item.MaPhongChieu,
+                    item.TenPhongChieu,
+                    item.TinhTrang,
+                    item.GiaVe,
+                    img
+                );
             }
-
-            //Lọc ra những phim không bị "ngưng chiếu"
-            var danhSachKhongNgungChieu = danhSach.Where(s => s.TinhTrang != "Ngừng chiếu").ToList();
-            dgvSuatChieuPhim.DataSource = danhSachKhongNgungChieu;
-
-
-
+            // Thêm các dòng trạng thái phim
+            dgvSuatChieuPhim.AllowUserToAddRows = false;
         }
         public void LoadDataGridView()
         {
-            suatChieu = new SuatChieuDAL();
-            List<DTO_Model.SuatChieuDTO> list = suatChieu.selectAll();
-            dgvSuatChieuPhim.DataSource = null;
-            dgvSuatChieuPhim.DataSource = list;
-            if (list.Count > 0 && list != null)
-            {
-                dgvSuatChieuPhim.DataSource = list;
+            //suatChieu = new SuatChieuDAL();
+            //List<DTO_Model.SuatChieuDTO> list = suatChieu.selectAll();
+            //dgvSuatChieuPhim.Columns.Clear();
+            //dgvSuatChieuPhim.Rows.Clear();
 
-            }
+
         }
 
         private void dgvSuatChieuPhim_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -92,10 +143,25 @@ namespace GUI
 
         private void btnChonPhim_Click(object sender, EventArgs e)
         {
+            
             if (dgvSuatChieuPhim.CurrentRow != null)
             {
                 string maSuat = dgvSuatChieuPhim.CurrentRow.Cells["MaSuatChieu"].Value.ToString();
                 string tenPhim = dgvSuatChieuPhim.CurrentRow.Cells["TenPhim"].Value.ToString();
+                string tenPhongChieu = dgvSuatChieuPhim.CurrentRow.Cells["TenPhongChieu"].Value.ToString();
+                string maPhongChieu = dgvSuatChieuPhim.CurrentRow.Cells["MaPhongChieu"].Value.ToString();
+                SuatChieuDTO sc = suatChieu.selectByMa(maSuat);
+                if (sc == null)
+                {
+                    MessageBox.Show("Không lấy được thời gian suất chiếu!", "Lỗi");
+                    return;
+                }
+                TimeSpan gioBatDau = sc.GioBatDau;
+                TimeSpan gioKetThuc = sc.GioKetThuc;
+
+
+
+
 
                 // Lấy form Main (cha chứa panel)
                 Main mainForm = (Main)(this.MdiParent ?? this.TopLevelControl);
@@ -104,7 +170,7 @@ namespace GUI
                 mainForm.Hide();
 
                 // Mở form DatVe
-                FrmDatVe frm = new FrmDatVe(maSuat, tenPhim);
+                FrmDatVe frm = new FrmDatVe(maSuat, tenPhim, tenPhongChieu, maPhongChieu,gioBatDau,gioKetThuc);
 
                 frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -123,6 +189,23 @@ namespace GUI
             {
                 MessageBox.Show("Vui lòng chọn suất chiếu!", "Thông báo");
             }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            // bỏ chọn trên DataGridView
+            if (dgvSuatChieuPhim.CurrentRow != null)
+            {
+                dgvSuatChieuPhim.ClearSelection();
+                SelectedMaSuat = string.Empty;
+                SelectedTenPhim = string.Empty;
+                SelectedTenPhongChieu = string.Empty;
+            }
+            else
+            {
+                MessageBox.Show("Không có suất chiếu nào được chọn để hủy!", "Thông báo");
+            }
+
         }
     }
 }
